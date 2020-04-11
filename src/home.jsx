@@ -1,16 +1,51 @@
 import React from "react";
 import {
+  Box,
   Button,
   Card,
   CardActions,
   CardContent,
-  makeStyles,
+  Divider,
   Grid,
-  Box,
+  makeStyles,
   Typography,
 } from "@material-ui/core";
 
 import logo from "./logo.png";
+
+const RegisterButton = () => (
+  <Box p="50px">
+    <Button variant="outlined" size="large" fullWidth color="primary">
+      <Typography variant="button" display="block" gutterBottom>
+        REGISTER
+      </Typography>
+    </Button>
+    <Typography variant="caption" display="block" gutterBottom>
+      caption text
+    </Typography>
+  </Box>
+);
+
+const About = () => {
+  return (
+    <Grid container spacing={3}>
+      <Grid item xs={8}>
+        <Typography variant="h1" gutterBottom>
+          About
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+          blanditiis tenetur unde suscipit, quam beatae rerum inventore
+          consectetur, neque doloribus, cupiditate numquam dignissimos laborum
+          fugiat deleniti? Eum quasi quidem quibusdam.
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <RegisterButton />
+      </Grid>
+    </Grid>
+  );
+};
 
 const useHeaderItemStyles = makeStyles((theme) => ({
   title: {
@@ -109,6 +144,9 @@ const Home = () => {
           </Box>
         </Grid>
       </Grid>
+      <Divider variant="middle" />
+      <About />
+      <Divider variant="middle" />
       <footer className={classes.footer}>Sponsors</footer>
     </div>
   );
