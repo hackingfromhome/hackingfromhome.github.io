@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -12,6 +12,11 @@ import {
 } from "@material-ui/core";
 
 import logo from "./logo.png";
+
+const ABOUT = 'about';
+const RULES_PRIZES = 'rulesAndPrizes';
+const REGISTER = 'register';
+const MENTORS = 'mentors';
 
 const RegisterButton = () => (
   <Box p="50px">
@@ -42,6 +47,27 @@ const About = () => {
       </Grid>
       <Grid item xs={4}>
         <RegisterButton />
+      </Grid>
+    </Grid>
+  );
+};
+
+const RulesAndPrize = ({ actionFn }) => {
+  return (
+    <Grid container spacing={3}>
+      <Grid item xs={8}>
+        <Typography variant="h1" gutterBottom>
+          Rules & Prize
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+          blanditiis tenetur unde suscipit, quam beatae rerum inventore
+          consectetur, neque doloribus, cupiditate numquam dignissimos laborum
+          fugiat deleniti? Eum quasi quidem quibusdam.
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <RegisterButton actionFn={actionFn} />
       </Grid>
     </Grid>
   );
@@ -107,6 +133,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const classes = useStyles();
+  const [display, setDisplay] = useState(ABOUT);
+
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
@@ -119,13 +147,13 @@ const Home = () => {
               title="About"
               description="Some default text to fill some space, and something more so there is
             more text"
-              actionFn={() => console.log("about")}
+              actionFn={() => setDisplay(ABOUT)}
             />
             <HeaderItem
               title="Register"
               description="Some default text to fill some space, and something more so there is
             more text"
-              actionFn={() => console.log("Register")}
+              actionFn={setDisplay}
             />
           </Box>
           <Box className={classes.headerLine}>
@@ -133,19 +161,24 @@ const Home = () => {
               title="Rules & Prize"
               description="Some default text to fill some space, and something more so there is
             more text"
-              actionFn={() => console.log("rules")}
+              actionFn={() => setDisplay(RULES_PRIZES)}
             />
             <HeaderItem
               title="Mentors"
               description="Some default text to fill some space, and something more so there is
             more text"
-              actionFn={() => console.log("Mentors")}
+              actionFn={setDisplay}
             />
           </Box>
         </Grid>
       </Grid>
       <Divider variant="middle" />
-      <About />
+      <Box display={display === ABOUT ? "block" : "none"}>
+        <About />
+      </Box>
+      <Box display={display === RULES_PRIZES ? "block" : "none"}>
+        <RulesAndPrize />
+      </Box>
       <Divider variant="middle" />
       <footer className={classes.footer}>Sponsors</footer>
     </div>
