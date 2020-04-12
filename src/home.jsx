@@ -13,12 +13,50 @@ import {
 
 import logo from "./logo.png";
 import coinsquareLogo from "./coinsquare_transparent.png";
-import { typography } from "@material-ui/system";
 
 const ABOUT = "about";
 const RULES_PRIZES = "rulesAndPrizes";
 const REGISTER = "register";
 const MENTORS = "mentors";
+
+const Register = () => {
+  return (
+    <Grid container spacing={3}>
+      <Grid item xs={8}>
+        <Typography variant="h1" gutterBottom>
+          Register
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          Registration is not open yet, but you can subscribe to receive an
+          email when the registration opens.
+        </Typography>
+        <Typography variant="h6" component="h2" gutterBottom>
+          After Registration
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          After you register you will be invited to a Slack group where you will
+          be able to connect with other participants, discuss ideas for projects
+          and get to know the amazing people involved in the Hacking From Home
+          hackathon.
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <Box p="30px">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSedJfn1pVqKisP3fByc-_WfJfUhsB2Cmx1OtLZOY_2tFOOoUw/viewform?embedded=true"
+            width="640"
+            height="590"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        </Box>
+      </Grid>
+    </Grid>
+  );
+};
 
 const RegisterButton = () => (
   <Box p="50px">
@@ -182,7 +220,7 @@ const Home = () => {
               title="Register"
               description="Some default text to fill some space, and something more so there is
             more text"
-              actionFn={setDisplay}
+              actionFn={() => setDisplay(REGISTER)}
             />
           </Box>
           <Box className={classes.headerLine}>
@@ -207,6 +245,9 @@ const Home = () => {
       </Box>
       <Box display={display === RULES_PRIZES ? "block" : "none"}>
         <RulesAndPrize />
+      </Box>
+      <Box display={display === REGISTER ? "block" : "none"}>
+        <Register />
       </Box>
       <Divider variant="middle" />
       <footer className={classes.footer}>
