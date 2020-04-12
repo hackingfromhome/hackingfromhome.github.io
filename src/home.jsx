@@ -45,7 +45,7 @@ const Register = () => {
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSedJfn1pVqKisP3fByc-_WfJfUhsB2Cmx1OtLZOY_2tFOOoUw/viewform?embedded=true"
             width="640"
-            height="590"
+            height="650"
             frameborder="0"
             marginheight="0"
             marginwidth="0"
