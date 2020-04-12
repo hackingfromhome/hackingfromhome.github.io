@@ -4,11 +4,13 @@ import {
   Button,
   Card,
   CardActions,
+  CardActionArea,
   CardContent,
+  CardMedia,
   Divider,
   Grid,
   makeStyles,
-  Typography,
+  Typography
 } from "@material-ui/core";
 
 import logo from "./logo.png";
@@ -136,13 +138,71 @@ const RulesAndPrize = ({ actionFn }) => {
   );
 };
 
-const useHeaderItemStyles = makeStyles((theme) => ({
+const mentorStyles = makeStyles({
+  root: {
+    maxWidth: 345
+  },
+  media: {
+    height: 140
+  }
+});
+
+const MentorCard = ({ image, name, info, linkedin }) => {
+  const classes = mentorStyles();
+
+  return (
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={image}
+          title="mentor photo"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {name}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {info}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+          {linkedin}
+        </Button>
+      </CardActions>
+    </Card>
+  );
+};
+
+const Mentors = () => {
+  return (
+    <>
+      <Typography variant="h1" gutterBottom>
+        Mentors
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={4}>
+          <MentorCard
+            image="https://avatars2.githubusercontent.com/u/7313714"
+            name="Luciano Medeiros Marcelino"
+            info="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy"
+            linkedin="https://www.linkedin.com/in/marcelinoluciano/"
+          />
+        </Grid>
+      </Grid>
+    </>
+  );
+};
+
+const useHeaderItemStyles = makeStyles(theme => ({
   title: {
-    fontSize: 14,
+    fontSize: 14
   },
   headerCard: {
-    marginBottom: theme.spacing(2),
-  },
+    marginBottom: theme.spacing(2)
+  }
 }));
 
 const HeaderItem = ({ title, description, actionFn }) => {
@@ -171,31 +231,31 @@ const HeaderItem = ({ title, description, actionFn }) => {
   );
 };
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(10),
+    padding: theme.spacing(10)
   },
   headerLine: {
     padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.secondary
   },
   headerLogo: {
-    width: "300px",
+    width: "300px"
   },
   sponsorLogo: {
-    width: "100px",
+    width: "100px"
   },
   rightMenu: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
-    height: "100%",
+    height: "100%"
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
-    textAlign: "center",
-  },
+    textAlign: "center"
+  }
 }));
 
 const Home = () => {
@@ -234,7 +294,7 @@ const Home = () => {
               title="Mentors"
               description="Some default text to fill some space, and something more so there is
             more text"
-              actionFn={setDisplay}
+              actionFn={() => setDisplay(MENTORS)}
             />
           </Box>
         </Grid>
@@ -248,6 +308,9 @@ const Home = () => {
       </Box>
       <Box display={display === REGISTER ? "block" : "none"}>
         <Register />
+      </Box>
+      <Box display={display === MENTORS ? "block" : "none"}>
+        <Mentors />
       </Box>
       <Divider variant="middle" />
       <footer className={classes.footer}>
