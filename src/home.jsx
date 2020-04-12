@@ -8,7 +8,7 @@ import {
   Divider,
   Grid,
   makeStyles,
-  Typography
+  Typography,
 } from "@material-ui/core";
 
 import logo from "./logo.png";
@@ -98,13 +98,13 @@ const RulesAndPrize = ({ actionFn }) => {
   );
 };
 
-const useHeaderItemStyles = makeStyles(theme => ({
+const useHeaderItemStyles = makeStyles((theme) => ({
   title: {
-    fontSize: 14
+    fontSize: 14,
   },
   headerCard: {
-    marginBottom: theme.spacing(2)
-  }
+    marginBottom: theme.spacing(2),
+  },
 }));
 
 const HeaderItem = ({ title, description, actionFn }) => {
@@ -133,30 +133,31 @@ const HeaderItem = ({ title, description, actionFn }) => {
   );
 };
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    padding: theme.spacing(10)
+    padding: theme.spacing(10),
   },
   headerLine: {
     padding: theme.spacing(2),
-    color: theme.palette.text.secondary
+    color: theme.palette.text.secondary,
   },
   headerLogo: {
-    width: "300px"
+    width: "300px",
   },
   sponsorLogo: {
-    width: "100px"
+    width: "100px",
   },
   rightMenu: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
-    height: "100%"
+    height: "100%",
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6)
-  }
+    padding: theme.spacing(6),
+    textAlign: "center",
+  },
 }));
 
 const Home = () => {
@@ -213,7 +214,12 @@ const Home = () => {
           Sponsors
         </Typography>
         <Box>
-          <img src={coinsquareLogo} className={classes.sponsorLogo} />
+          <a href="https://coinsquare.com/" target="_blank">
+            <img src={coinsquareLogo} className={classes.sponsorLogo} />
+            <Typography variant="caption" display="block" gutterBottom>
+              Coinsquare
+            </Typography>
+          </a>
         </Box>
       </footer>
     </div>
