@@ -10,8 +10,9 @@ import {
   Divider,
   Grid,
   makeStyles,
-  Typography
+  Typography,
 } from "@material-ui/core";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 import logo from "./logo.png";
 import coinsquareLogo from "./coinsquare_transparent.png";
@@ -20,6 +21,57 @@ const ABOUT = "about";
 const RULES_PRIZES = "rulesAndPrizes";
 const REGISTER = "register";
 const MENTORS = "mentors";
+const MENTORS_LIST = [
+  {
+    image: "https://avatars3.githubusercontent.com/u/410616",
+    name: "Danilo Penna Queiroz",
+    info:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+    linkedin: "https://www.linkedin.com/in/daniloqueiroz/",
+  },
+  {
+    image: "https://avatars2.githubusercontent.com/u/6999140",
+    name: "Leonardo Lima",
+    info:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+    linkedin: "https://www.linkedin.com/in/leosilvalima/",
+  },
+  {
+    image: "https://avatars0.githubusercontent.com/u/2237774",
+    name: "Lucas Furtado",
+    info:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+    linkedin: "https://www.linkedin.com/in/lucasslf/",
+  },
+  {
+    image: "https://avatars2.githubusercontent.com/u/7313714",
+    name: "Luciano Medeiros Marcelino",
+    info:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+    linkedin: "https://www.linkedin.com/in/marcelinoluciano/",
+  },
+  {
+    image: "https://avatars2.githubusercontent.com/u/6999140",
+    name: "Leonardo Lima",
+    info:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+    linkedin: "https://www.linkedin.com/in/leosilvalima/",
+  },
+  {
+    image: "https://avatars3.githubusercontent.com/u/410616",
+    name: "Danilo Penna Queiroz",
+    info:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+    linkedin: "https://www.linkedin.com/in/daniloqueiroz/",
+  },
+  {
+    image: "https://avatars3.githubusercontent.com/u/410616",
+    name: "Danilo Penna Queiroz",
+    info:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+    linkedin: "https://www.linkedin.com/in/daniloqueiroz/",
+  },
+];
 
 const Register = () => {
   return (
@@ -138,17 +190,18 @@ const RulesAndPrize = ({ actionFn }) => {
   );
 };
 
-const mentorStyles = makeStyles({
+const mentorCardStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345
+    maxWidth: 445,
+    margin: theme.spacing(2),
   },
   media: {
-    height: 140
-  }
-});
+    height: 260,
+  },
+}));
 
 const MentorCard = ({ image, name, info, linkedin }) => {
-  const classes = mentorStyles();
+  const classes = mentorCardStyles();
 
   return (
     <Card className={classes.root}>
@@ -168,41 +221,56 @@ const MentorCard = ({ image, name, info, linkedin }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          {linkedin}
-        </Button>
+        <a href={linkedin} target="_blank">
+          <LinkedInIcon></LinkedInIcon>
+        </a>
       </CardActions>
     </Card>
   );
 };
 
+const mentorStyles = makeStyles({
+  row: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    height: "100%",
+  },
+});
+
 const Mentors = () => {
+  const classes = mentorStyles();
+
   return (
     <>
       <Typography variant="h1" gutterBottom>
         Mentors
       </Typography>
       <Grid container spacing={3}>
-        <Grid item xs={4}>
-          <MentorCard
-            image="https://avatars2.githubusercontent.com/u/7313714"
-            name="Luciano Medeiros Marcelino"
-            info="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy"
-            linkedin="https://www.linkedin.com/in/marcelinoluciano/"
-          />
-        </Grid>
+        {MENTORS_LIST.map((mentor, _index) => {
+          return (
+            <Grid item xs={3} className={classes.row}>
+              <MentorCard
+                image={mentor.image}
+                name={mentor.name}
+                info={mentor.info}
+                linkedin={mentor.linkedin}
+              />
+            </Grid>
+          );
+        })}
       </Grid>
     </>
   );
 };
 
-const useHeaderItemStyles = makeStyles(theme => ({
+const useHeaderItemStyles = makeStyles((theme) => ({
   title: {
-    fontSize: 14
+    fontSize: 14,
   },
   headerCard: {
-    marginBottom: theme.spacing(2)
-  }
+    marginBottom: theme.spacing(2),
+  },
 }));
 
 const HeaderItem = ({ title, description, actionFn }) => {
@@ -231,31 +299,31 @@ const HeaderItem = ({ title, description, actionFn }) => {
   );
 };
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    padding: theme.spacing(10)
+    padding: theme.spacing(10),
   },
   headerLine: {
     padding: theme.spacing(2),
-    color: theme.palette.text.secondary
+    color: theme.palette.text.secondary,
   },
   headerLogo: {
-    width: "300px"
+    width: "300px",
   },
   sponsorLogo: {
-    width: "100px"
+    width: "100px",
   },
   rightMenu: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
-    height: "100%"
+    height: "100%",
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 }));
 
 const Home = () => {
