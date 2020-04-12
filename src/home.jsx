@@ -8,15 +8,17 @@ import {
   Divider,
   Grid,
   makeStyles,
-  Typography,
+  Typography
 } from "@material-ui/core";
 
 import logo from "./logo.png";
+import coinsquareLogo from "./coinsquare_transparent.png";
+import { typography } from "@material-ui/system";
 
-const ABOUT = 'about';
-const RULES_PRIZES = 'rulesAndPrizes';
-const REGISTER = 'register';
-const MENTORS = 'mentors';
+const ABOUT = "about";
+const RULES_PRIZES = "rulesAndPrizes";
+const REGISTER = "register";
+const MENTORS = "mentors";
 
 const RegisterButton = () => (
   <Box p="50px">
@@ -59,11 +61,34 @@ const RulesAndPrize = ({ actionFn }) => {
         <Typography variant="h1" gutterBottom>
           Rules & Prize
         </Typography>
+        <Typography variant="h6" component="h2" gutterBottom>
+          Rules
+        </Typography>
         <Typography variant="body1" gutterBottom>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-          blanditiis tenetur unde suscipit, quam beatae rerum inventore
-          consectetur, neque doloribus, cupiditate numquam dignissimos laborum
-          fugiat deleniti? Eum quasi quidem quibusdam.
+          <ul>
+            <li>All code must be open source</li>
+            <li>Teams must be 3 to 5 people</li>
+            <li>The solution must be related to Social Distancing/COVID-19</li>
+            <li>All docs should be in English</li>
+          </ul>
+        </Typography>
+        <Typography variant="h6" component="h2" gutterBottom>
+          Grading Criteria
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          <ul>
+            <li>Compliance to the rules</li>
+            <li>Completeness / Readiness</li>
+            <li>Applicability</li>
+            <li>User experience</li>
+            <li>Read me/ docs</li>
+          </ul>
+        </Typography>
+        <Typography variant="h6" component="h2" gutterBottom>
+          Prize
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          1 ETH Coin
         </Typography>
       </Grid>
       <Grid item xs={4}>
@@ -73,13 +98,13 @@ const RulesAndPrize = ({ actionFn }) => {
   );
 };
 
-const useHeaderItemStyles = makeStyles((theme) => ({
+const useHeaderItemStyles = makeStyles(theme => ({
   title: {
-    fontSize: 14,
+    fontSize: 14
   },
   headerCard: {
-    marginBottom: theme.spacing(2),
-  },
+    marginBottom: theme.spacing(2)
+  }
 }));
 
 const HeaderItem = ({ title, description, actionFn }) => {
@@ -108,27 +133,30 @@ const HeaderItem = ({ title, description, actionFn }) => {
   );
 };
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(10),
+    padding: theme.spacing(10)
   },
   headerLine: {
     padding: theme.spacing(2),
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.secondary
   },
   headerLogo: {
-    width: "300px",
+    width: "300px"
+  },
+  sponsorLogo: {
+    width: "100px"
   },
   rightMenu: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
-    height: "100%",
+    height: "100%"
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
-  },
+    padding: theme.spacing(6)
+  }
 }));
 
 const Home = () => {
@@ -180,7 +208,14 @@ const Home = () => {
         <RulesAndPrize />
       </Box>
       <Divider variant="middle" />
-      <footer className={classes.footer}>Sponsors</footer>
+      <footer className={classes.footer}>
+        <Typography variant="h3" component="h1" gutterBottom>
+          Sponsors
+        </Typography>
+        <Box>
+          <img src={coinsquareLogo} className={classes.sponsorLogo} />
+        </Box>
+      </footer>
     </div>
   );
 };
