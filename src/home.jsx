@@ -116,9 +116,9 @@ const RegisterButton = ({ registerFn }) => (
   <Box p="50px">
     <Button
       variant="outlined"
+      color="default"
       size="large"
       fullWidth
-      color="primary"
       onClick={registerFn}
     >
       <Typography variant="button" display="block" gutterBottom>
@@ -146,7 +146,10 @@ const About = ({ registerFn }) => {
           sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde
           suscipit, quam beatae rerum inventore consectetur, neque doloribus,
           cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi
-          quidem quibusdam.
+          quidem quibusdam. body1. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae
+          rerum inventore consectetur, neque doloribus, cupiditate numquam
+          dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
         </Typography>
       </Grid>
       <Grid item xs={4}>
@@ -336,7 +339,7 @@ const useStyles = makeStyles(theme => ({
   },
   footer: {
     backgroundColor: "#eeeeee",
-    padding: theme.spacing(6),
+    padding: theme.spacing(15),
     textAlign: "center"
   }
 }));
