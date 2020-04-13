@@ -75,7 +75,7 @@ const MENTORS_LIST = [
 const Register = () => {
   return (
     <Grid container spacing={3}>
-      <Grid item xs={8}>
+      <Grid item xs={6}>
         <Typography variant="h3" component="h1" gutterBottom>
           Register
         </Typography>
@@ -83,6 +83,7 @@ const Register = () => {
           Registration is not open yet, but you can subscribe to receive an
           email when the registration opens.
         </Typography>
+        <br></br>
         <Typography variant="h6" component="h2" gutterBottom>
           After Registration
         </Typography>
@@ -272,10 +273,11 @@ const Mentors = () => {
 
 const useHeaderItemStyles = makeStyles(theme => ({
   title: {
-    fontSize: 14
+    fontSize: 18
   },
   headerCard: {
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
+    backgroundColor: "#fafafa"
   }
 }));
 
@@ -395,9 +397,9 @@ const Home = () => {
         <Box>
           <a href="https://coinsquare.com/" target="_blank">
             <img src={coinsquareLogo} className={classes.sponsorLogo} />
-            <Typography variant="caption" display="block" gutterBottom>
+            {/* <Typography variant="caption" display="block" gutterBottom>
               Coinsquare
-            </Typography>
+            </Typography> */}
           </a>
         </Box>
       </footer>
