@@ -13,7 +13,6 @@ import {
   Typography
 } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-
 import logo from "./logo.png";
 import coinsquareLogo from "./coinsquare_transparent.png";
 
@@ -77,7 +76,7 @@ const Register = () => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={8}>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h3" component="h1" gutterBottom>
           Register
         </Typography>
         <Typography variant="body1" gutterBottom>
@@ -135,7 +134,7 @@ const About = ({ registerFn }) => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={8}>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h3" component="h1" gutterBottom>
           About
         </Typography>
         <Typography variant="body1" gutterBottom>
@@ -156,7 +155,7 @@ const RulesAndPrize = ({ registerFn }) => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={8}>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h3" component="h1" gutterBottom>
           Rules & Prize
         </Typography>
         <Typography variant="h6" component="h2" gutterBottom>
@@ -199,6 +198,7 @@ const RulesAndPrize = ({ registerFn }) => {
 const mentorCardStyles = makeStyles(theme => ({
   root: {
     maxWidth: 445,
+    backgroundColor: "#fafafa",
     margin: theme.spacing(2)
   },
   media: {
@@ -249,7 +249,7 @@ const Mentors = () => {
 
   return (
     <>
-      <Typography variant="h1" gutterBottom>
+      <Typography variant="h3" component="h1" gutterBottom>
         Mentors
       </Typography>
       <Grid container spacing={3}>
@@ -307,7 +307,8 @@ const HeaderItem = ({ title, description, actionFn }) => {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(10)
+    padding: theme.spacing(10),
+    backgroundColor: "#eeeeee"
   },
   headerLine: {
     padding: theme.spacing(2),
@@ -326,7 +327,7 @@ const useStyles = makeStyles(theme => ({
     height: "100%"
   },
   footer: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#eeeeee",
     padding: theme.spacing(6),
     textAlign: "center"
   }
