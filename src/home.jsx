@@ -14,6 +14,7 @@ import {
 } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import logo from "./banner.png";
+import fran from "./fran.png";
 import coinsquareLogo from "./coinsquare_transparent.png";
 
 const ABOUT = "about";
@@ -29,8 +30,7 @@ const MENTORS_LIST = [
     linkedin: "https://www.linkedin.com/in/daniloqueiroz/"
   },
   {
-    image:
-      "https://media-exp1.licdn.com/dms/image/C5603AQFYStbooNp-Cg/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=ZS5YRJNm8Jm6at10IatizMuDioI11czf4FP6WVLegRo",
+    image: fran,
     name: "Franchesca Tingting",
     info:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
