@@ -321,7 +321,9 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary
   },
   headerLogo: {
-    width: "80%"
+    width: "80%",
+    height: "fit - content",
+    padding: "inherit"
   },
   sponsorLogo: {
     width: "100px"
@@ -349,7 +351,7 @@ const Home = () => {
         <Grid item xs={5}>
           <img src={logo} className={classes.headerLogo} />
         </Grid>
-        <Grid item xs={6} className={classes.rightMenu}>
+        <Grid item xs={7} className={classes.rightMenu}>
           <Box className={classes.headerLine}>
             <HeaderItem
               title="About"
