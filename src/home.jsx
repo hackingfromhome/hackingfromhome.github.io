@@ -109,11 +109,11 @@ const Register = () => {
 };
 
 const RegisterButton = ({ registerFn }) => (
-  <Box p="50px">
+  <Box p="60px">
     <Button
       variant="outlined"
-      background-color="yellow"
       size="large"
+      width="70%"
       fullWidth
       onClick={registerFn}
     >
@@ -138,14 +138,24 @@ const About = ({ registerFn }) => {
           body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
           blanditiis tenetur unde suscipit, quam beatae rerum inventore
           consectetur, neque doloribus, cupiditate numquam dignissimos laborum
+          fugiat deleniti? Eum quasi quidem quibusdam.body1. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde
+          suscipit, quam beatae rerum inventore consectetur, neque doloribus,
+          cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi
+          quidem quibusdam.
+        </Typography>
+        <Typography variant="h5" component="h2" gutterBottom>
+          Why? When?
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+          blanditiis tenetur unde suscipit, quam beatae rerum inventore
+          consectetur, neque doloribus, cupiditate numquam dignissimos laborum
           fugiat deleniti? Eum quasi quidem quibusdam. body1. Lorem ipsum dolor
           sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde
           suscipit, quam beatae rerum inventore consectetur, neque doloribus,
           cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi
-          quidem quibusdam. body1. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae
-          rerum inventore consectetur, neque doloribus, cupiditate numquam
-          dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+          quidem quibusdam.
         </Typography>
       </Grid>
       <Grid item xs={4}>
