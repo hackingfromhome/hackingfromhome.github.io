@@ -363,6 +363,10 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-evenly",
     height: "100%"
   },
+  divider: {
+    marginTop: "15px",
+    marginBottom: "15px"
+  },
   footer: {
     backgroundColor: "#eeeeee",
     padding: theme.spacing(3),
@@ -411,7 +415,7 @@ const Home = () => {
           </Box>
         </Grid>
       </Grid>
-      <Divider variant="middle" />
+      <Divider className={classes.divider} />
       <Box display={display === ABOUT ? "block" : "none"}>
         <About registerFn={() => setDisplay(REGISTER)} />
       </Box>
@@ -425,11 +429,11 @@ const Home = () => {
         <Mentors />
       </Box>
       <footer className={classes.footer}>
-        <Divider variant="middle" />
+        <Divider className={classes.divider} />
         <Typography variant="h3" component="h1" gutterBottom>
           Sponsors
         </Typography>
-        <Box>
+        <Box pt="10px">
           <a href="https://coinsquare.com/" target="_blank">
             <img src={coinsquareLogo} className={classes.sponsorLogo} />
             {/* <Typography variant="caption" display="block" gutterBottom>
