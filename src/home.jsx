@@ -71,7 +71,7 @@ const MENTORS_LIST = [
 const Register = () => {
   return (
     <Grid container spacing={3}>
-      <Grid item xs={6}>
+      <Grid item xs={8}>
         <Typography variant="h3" component="h1" gutterBottom>
           Register
         </Typography>
@@ -108,24 +108,41 @@ const Register = () => {
   );
 };
 
-const RegisterButton = ({ registerFn }) => (
-  <Box p="60px">
-    <Button
-      variant="outlined"
-      size="large"
-      width="70%"
-      fullWidth
-      onClick={registerFn}
-    >
-      <Typography variant="button" display="block" gutterBottom>
-        REGISTER
+const buttonStyles = makeStyles(theme => ({
+  root: {
+    backgroundColor: "yellow",
+    lineHeight: 1.5,
+    borderColor: "black",
+    "&:hover": {
+      backgroundColor: "#fff9c4"
+    }
+  }
+}));
+
+const RegisterButton = ({ registerFn }) => {
+  const classes = buttonStyles();
+
+  return (
+    <Box p="60px">
+      <Button
+        variant="outlined"
+        size="large"
+        width="70%"
+        backgroundColor="yellow"
+        fullWidth
+        className={classes.root}
+        onClick={registerFn}
+      >
+        <Typography variant="button" display="block" gutterBottom>
+          REGISTER
+        </Typography>
+      </Button>
+      <Typography variant="caption" display="block" gutterBottom>
+        Register here!
       </Typography>
-    </Button>
-    <Typography variant="caption" display="block" gutterBottom>
-      Register here!
-    </Typography>
-  </Box>
-);
+    </Box>
+  );
+};
 
 const About = ({ registerFn }) => {
   return (
@@ -322,7 +339,10 @@ const HeaderItem = ({ title, description, actionFn }) => {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(10),
+    paddingLeft: theme.spacing(12),
+    paddingRight: theme.spacing(12),
+    paddingBottom: theme.spacing(3),
+    paddingTop: theme.spacing(3),
     backgroundColor: "#eeeeee"
   },
   headerLine: {
@@ -345,7 +365,7 @@ const useStyles = makeStyles(theme => ({
   },
   footer: {
     backgroundColor: "#eeeeee",
-    padding: theme.spacing(15),
+    padding: theme.spacing(3),
     textAlign: "center"
   }
 }));
@@ -404,8 +424,8 @@ const Home = () => {
       <Box display={display === MENTORS ? "block" : "none"}>
         <Mentors />
       </Box>
-      <Divider variant="middle" />
       <footer className={classes.footer}>
+        <Divider variant="middle" />
         <Typography variant="h3" component="h1" gutterBottom>
           Sponsors
         </Typography>
