@@ -13,7 +13,7 @@ import {
   Typography
 } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import logo from "./logo.png";
+import logo from "./banner.png";
 import coinsquareLogo from "./coinsquare_transparent.png";
 
 const ABOUT = "about";
@@ -142,7 +142,11 @@ const About = ({ registerFn }) => {
           body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
           blanditiis tenetur unde suscipit, quam beatae rerum inventore
           consectetur, neque doloribus, cupiditate numquam dignissimos laborum
-          fugiat deleniti? Eum quasi quidem quibusdam.
+          fugiat deleniti? Eum quasi quidem quibusdam. body1. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde
+          suscipit, quam beatae rerum inventore consectetur, neque doloribus,
+          cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi
+          quidem quibusdam.
         </Typography>
       </Grid>
       <Grid item xs={4}>
@@ -317,7 +321,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary
   },
   headerLogo: {
-    width: "300px"
+    width: "80%"
   },
   sponsorLogo: {
     width: "100px"
@@ -342,7 +346,7 @@ const Home = () => {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={6}>
+        <Grid item xs={5}>
           <img src={logo} className={classes.headerLogo} />
         </Grid>
         <Grid item xs={6} className={classes.rightMenu}>
