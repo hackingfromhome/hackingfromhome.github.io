@@ -29,7 +29,16 @@ const MENTORS_LIST = [
     linkedin: "https://www.linkedin.com/in/daniloqueiroz/"
   },
   {
-    image: "https://avatars2.githubusercontent.com/u/6999140",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C5603AQFYStbooNp-Cg/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=ZS5YRJNm8Jm6at10IatizMuDioI11czf4FP6WVLegRo",
+    name: "Franchesca Tingting",
+    info:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+    linkedin: "https://www.linkedin.com/in/franchescatingting/"
+  },
+  {
+    image:
+      "https://media-exp1.licdn.com/dms/image/C4D03AQE_iJs0-ZhKFw/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=kWoS80dbF6c4mDFFxldxrYLJpHVhjPgVevOJVMEKVWI",
     name: "Leonardo Lima",
     info:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
@@ -50,25 +59,12 @@ const MENTORS_LIST = [
     linkedin: "https://www.linkedin.com/in/marcelinoluciano/"
   },
   {
-    image: "https://avatars2.githubusercontent.com/u/6999140",
-    name: "Leonardo Lima",
+    image:
+      "https://media-exp1.licdn.com/dms/image/C4E03AQEIqx_UvpExjQ/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=U373m3vn6JdUVWVa9Ie9XBQHDwd9vyt0KM2Fua2SOyk",
+    name: "Raphael Farinazzo",
     info:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
-    linkedin: "https://www.linkedin.com/in/leosilvalima/"
-  },
-  {
-    image: "https://avatars3.githubusercontent.com/u/410616",
-    name: "Danilo Penna Queiroz",
-    info:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
-    linkedin: "https://www.linkedin.com/in/daniloqueiroz/"
-  },
-  {
-    image: "https://avatars3.githubusercontent.com/u/410616",
-    name: "Danilo Penna Queiroz",
-    info:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
-    linkedin: "https://www.linkedin.com/in/daniloqueiroz/"
+    linkedin: "https://www.linkedin.com/in/rfarinazzo/"
   }
 ];
 
@@ -116,7 +112,7 @@ const RegisterButton = ({ registerFn }) => (
   <Box p="50px">
     <Button
       variant="outlined"
-      color="default"
+      background-color="yellow"
       size="large"
       fullWidth
       onClick={registerFn}
@@ -126,7 +122,7 @@ const RegisterButton = ({ registerFn }) => (
       </Typography>
     </Button>
     <Typography variant="caption" display="block" gutterBottom>
-      caption text
+      Register here!
     </Typography>
   </Box>
 );
@@ -210,7 +206,7 @@ const mentorCardStyles = makeStyles(theme => ({
     margin: theme.spacing(2)
   },
   media: {
-    height: 260
+    height: 315
   }
 }));
 
