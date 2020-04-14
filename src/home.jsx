@@ -226,8 +226,7 @@ const mentorCardStyles = makeStyles(theme => ({
   root: {
     maxWidth: 445,
     backgroundColor: "#fafafa",
-    margin: theme.spacing(2),
-    fontSize: 18
+    margin: theme.spacing(0),
   },
   media: {
     height: 300
