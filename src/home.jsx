@@ -10,7 +10,11 @@ import {
   Divider,
   Grid,
   makeStyles,
-  Typography
+  Typography,
+  AppBar,
+  Toolbar,
+  Menu,
+  MenuItem
 } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -303,36 +307,57 @@ const Mentors = () => {
 
 const useHeaderItemStyles = makeStyles(theme => ({
   title: {
-    fontSize: 20
-  },
-  headerCard: {
-    marginBottom: theme.spacing(2),
-    backgroundColor: "#fff9c4"
+    fontSize: 20,
+    alignContent: "center"
   }
 }));
 
 const HeaderItem = ({ title, actionFn }) => {
   const classes = useHeaderItemStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
-    <Card className={classes.headerCard}>
-      <CardContent>
-        <Typography
-          className={classes.title}
-          color="textSecondary"
-          gutterBottom
-        >
-          {title}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small" onClick={actionFn}>
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
+    <div>
+      <Button
+        className={classes.title}
+        aria-controls="simple-menu"
+        aria-haspopup="true"
+        onClick={actionFn}
+      >
+        {title}
+      </Button>
+    </div>
   );
 };
+
+// <Card className={classes.headerCard}>
+//   {/* <CardContent>
+//     <Typography
+//       className={classes.title}
+//       color="textSecondary"
+//       gutterBottom
+//     >
+//       {title}
+//     </Typography>
+//   </CardContent> */}
+{
+  /*  <CardActions>
+//     <Button size="small" onClick={actionFn}>
+//       {/* Learn More */
+}
+//       <Typography variant="h5" component="h2" alignContent="center">
+//         {title}
+//       </Typography>
+//     </Button>
+//   </CardActions>
+// </Card> */}
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -347,7 +372,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary
   },
   headerLogo: {
-    width: "70%",
+    width: "30%",
     height: "fit - content",
     padding: "inherit",
     display: "flex",
@@ -363,7 +388,7 @@ const useStyles = makeStyles(theme => ({
     height: "100%",
     backgroundColor: "yellow"
   },
-  leftMenu: {
+  appBar: {
     backgroundColor: "yellow"
   },
   divider: {
@@ -381,27 +406,27 @@ const Home = () => {
 
   return (
     <>
-      <Grid container spacing={3}>
-        <Grid item xs={5} className={classes.leftMenu}>
-          <img src={logo} className={classes.headerLogo} />
-        </Grid>
-        <Grid item xs={7} className={classes.rightMenu}>
-          <Box className={classes.headerLine}>
+      <AppBar position="static" className={classes.appBar}>
+        <Toolbar>
+          <img
+            src={logo}
+            className={classes.headerLogo}
+            alt="hacking from home logo"
+          />
+          <Box>
             <HeaderItem title="About" actionFn={() => setDisplay(ABOUT)} />
             <HeaderItem
               title="Register"
               actionFn={() => setDisplay(REGISTER)}
             />
-          </Box>
-          <Box className={classes.headerLine}>
             <HeaderItem
               title="Rules & Prize"
               actionFn={() => setDisplay(RULES_PRIZES)}
             />
             <HeaderItem title="Mentors" actionFn={() => setDisplay(MENTORS)} />
           </Box>
-        </Grid>
-      </Grid>
+        </Toolbar>
+      </AppBar>
       <div className={classes.root}>
         <Box display={display === ABOUT ? "block" : "none"}>
           <About registerFn={() => setDisplay(REGISTER)} />
@@ -423,9 +448,6 @@ const Home = () => {
           <Box pt="10px">
             <a href="https://coinsquare.com/" target="_blank">
               <img src={coinsquareLogo} className={classes.sponsorLogo} />
-              {/* <Typography variant="caption" display="block" gutterBottom>
-              Coinsquare
-            </Typography> */}
             </a>
           </Box>
         </footer>
