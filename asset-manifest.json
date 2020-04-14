@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bb711070.chunk.css",
+    "main.js": "/static/js/main.4e743137.chunk.js",
+    "main.js.map": "/static/js/main.4e743137.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b9f45d43.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b9f45d43.js.map",
+    "static/js/2.c134b54d.chunk.js": "/static/js/2.c134b54d.chunk.js",
+    "static/js/2.c134b54d.chunk.js.map": "/static/js/2.c134b54d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a435d5c88a533f4f8e98fd956015b7c8.js": "/precache-manifest.a435d5c88a533f4f8e98fd956015b7c8.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.bb711070.chunk.css.map": "/static/css/main.bb711070.chunk.css.map",
+    "static/js/2.c134b54d.chunk.js.LICENSE.txt": "/static/js/2.c134b54d.chunk.js.LICENSE.txt",
+    "static/media/banner.png": "/static/media/banner.b9bd28bf.png",
+    "static/media/coinsquare_transparent.png": "/static/media/coinsquare_transparent.378ac983.png",
+    "static/media/farinazzo.png": "/static/media/farinazzo.fdcf9473.png",
+    "static/media/fran.png": "/static/media/fran.b82b2709.png",
+    "static/media/leo.jpg": "/static/media/leo.6ec982b8.jpg",
+    "static/media/luciano.png": "/static/media/luciano.2470b612.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b9f45d43.js",
+    "static/js/2.c134b54d.chunk.js",
+    "static/css/main.bb711070.chunk.css",
+    "static/js/main.4e743137.chunk.js"
+  ]
+}
