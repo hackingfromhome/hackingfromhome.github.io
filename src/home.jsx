@@ -22,6 +22,8 @@ import logo from "./banner.png";
 import fran from "./fran.png";
 import farinazzo from "./farinazzo.png";
 import coinsquareLogo from "./coinsquare_transparent.png";
+import leo from "./leo.jpg";
+import luciano from "./luciano.png";
 
 const ABOUT = "about";
 const RULES_PRIZES = "rulesAndPrizes";
@@ -45,8 +47,7 @@ const MENTORS_LIST = [
     github: "hah"
   },
   {
-    image:
-      "https://media-exp1.licdn.com/dms/image/C4D03AQE_iJs0-ZhKFw/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=kWoS80dbF6c4mDFFxldxrYLJpHVhjPgVevOJVMEKVWI",
+    image: leo,
     name: "Leonardo Lima",
     info:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
@@ -62,10 +63,10 @@ const MENTORS_LIST = [
     github: "https://github.com/lucasslf"
   },
   {
-    image: "https://avatars2.githubusercontent.com/u/7313714",
+    image: luciano,
     name: "Luciano Medeiros Marcelino",
     info:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+      "Luciano is a full stack software developer with experience with different products in different level of maturities. He's focused on Ruby on Rails applications and is currently working with Rest and GraphQL APIs.",
     linkedin: "https://www.linkedin.com/in/marcelinoluciano/",
     github: "https://github.com/marcelinol"
   },
@@ -233,7 +234,7 @@ const mentorCardStyles = makeStyles(theme => ({
     margin: theme.spacing(0)
   },
   media: {
-    height: 300
+    height: 400
   }
 }));
 
@@ -307,7 +308,7 @@ const Mentors = () => {
 
 const useHeaderItemStyles = makeStyles(theme => ({
   title: {
-    fontSize: 20,
+    fontSize: 18,
     alignContent: "center"
   }
 }));
