@@ -13,8 +13,10 @@ import {
   Typography
 } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import logo from "./banner.png";
 import fran from "./fran.png";
+import farinazzo from "./farinazzo.png";
 import coinsquareLogo from "./coinsquare_transparent.png";
 
 const ABOUT = "about";
@@ -27,14 +29,16 @@ const MENTORS_LIST = [
     name: "Danilo Penna Queiroz",
     info:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
-    linkedin: "https://www.linkedin.com/in/daniloqueiroz/"
+    linkedin: "https://www.linkedin.com/in/daniloqueiroz/",
+    gitHub: "https://github.com/daniloqueiroz"
   },
   {
     image: fran,
     name: "Franchesca Tingting",
     info:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
-    linkedin: "https://www.linkedin.com/in/franchescatingting/"
+    linkedin: "https://www.linkedin.com/in/franchescatingting/",
+    github: "hah"
   },
   {
     image:
@@ -42,55 +46,46 @@ const MENTORS_LIST = [
     name: "Leonardo Lima",
     info:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
-    linkedin: "https://www.linkedin.com/in/leosilvalima/"
+    linkedin: "https://www.linkedin.com/in/leosilvalima/",
+    github: "https://github.com/LeoSL"
   },
   {
     image: "https://avatars0.githubusercontent.com/u/2237774",
     name: "Lucas Furtado",
     info:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
-    linkedin: "https://www.linkedin.com/in/lucasslf/"
+    linkedin: "https://www.linkedin.com/in/lucasslf/",
+    github: "https://github.com/lucasslf"
   },
   {
     image: "https://avatars2.githubusercontent.com/u/7313714",
     name: "Luciano Medeiros Marcelino",
     info:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
-    linkedin: "https://www.linkedin.com/in/marcelinoluciano/"
+    linkedin: "https://www.linkedin.com/in/marcelinoluciano/",
+    github: "https://github.com/marcelinol"
   },
   {
-    image:
-      "https://media-exp1.licdn.com/dms/image/C4E03AQEIqx_UvpExjQ/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=U373m3vn6JdUVWVa9Ie9XBQHDwd9vyt0KM2Fua2SOyk",
+    image: farinazzo,
     name: "Raphael Farinazzo",
     info:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
-    linkedin: "https://www.linkedin.com/in/rfarinazzo/"
+      "Raphael Farinazzo is an entrepreneur, acting in the events business, as well as in software's. He has 15 years of experience in Marketing and Technology, specially  Product Management. He's also Head of Product at Involves, a trade promotion / merchandising SaaS scale-up.",
+    linkedin: "https://www.linkedin.com/in/rfarinazzo/",
+    github: "https://github.com/rfarinazzo"
   }
 ];
 
+const registerStyles = makeStyles(theme => ({
+  frame: {
+    justifyContent: "center"
+  }
+}));
+
 const Register = () => {
+  const classes = registerStyles();
   return (
     <Grid container spacing={3}>
-      <Grid item xs={8}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          Register
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          Registration is not open yet, but you can subscribe to receive an
-          email when the registration opens.
-        </Typography>
-        <br></br>
-        <Typography variant="h6" component="h2" gutterBottom>
-          After Registration
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          After you register you will be invited to a Slack group where you will
-          be able to connect with other participants, discuss ideas for projects
-          and get to know the amazing people involved in the Hacking From Home
-          hackathon.
-        </Typography>
-      </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={6}>
         <Box p="30px">
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSedJfn1pVqKisP3fByc-_WfJfUhsB2Cmx1OtLZOY_2tFOOoUw/viewform?embedded=true"
@@ -98,11 +93,15 @@ const Register = () => {
             height="650"
             frameborder="0"
             marginheight="0"
+            className={classes.frame}
             marginwidth="0"
           >
             Loading…
           </iframe>
         </Box>
+      </Grid>
+      <Grid item xs={6}>
+        <Box p="30px"></Box>
       </Grid>
     </Grid>
   );
@@ -112,7 +111,7 @@ const buttonStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "yellow",
     lineHeight: 1.5,
-    borderColor: "black",
+    height: "42px",
     "&:hover": {
       backgroundColor: "#fff9c4"
     }
@@ -125,21 +124,18 @@ const RegisterButton = ({ registerFn }) => {
   return (
     <Box p="60px">
       <Button
-        variant="outlined"
+        variant="button"
         size="large"
-        width="70%"
+        width="60%"
         backgroundColor="yellow"
         fullWidth
+        block
+        gutterBottom
         className={classes.root}
         onClick={registerFn}
       >
-        <Typography variant="button" display="block" gutterBottom>
-          REGISTER
-        </Typography>
+        Register
       </Button>
-      <Typography variant="caption" display="block" gutterBottom>
-        Register here!
-      </Typography>
     </Box>
   );
 };
@@ -230,14 +226,15 @@ const mentorCardStyles = makeStyles(theme => ({
   root: {
     maxWidth: 445,
     backgroundColor: "#fafafa",
-    margin: theme.spacing(2)
+    margin: theme.spacing(2),
+    fontSize: 18
   },
   media: {
-    height: 315
+    height: 300
   }
 }));
 
-const MentorCard = ({ image, name, info, linkedin }) => {
+const MentorCard = ({ image, name, info, linkedin, github }) => {
   const classes = mentorCardStyles();
 
   return (
@@ -261,6 +258,9 @@ const MentorCard = ({ image, name, info, linkedin }) => {
         <a href={linkedin} target="_blank">
           <LinkedInIcon></LinkedInIcon>
         </a>
+        <a href={github} target="_blank">
+          <GitHubIcon></GitHubIcon>
+        </a>
       </CardActions>
     </Card>
   );
@@ -270,7 +270,7 @@ const mentorStyles = makeStyles({
   row: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-evenly",
+    justifyContent: "stretch",
     height: "100%"
   }
 });
@@ -292,6 +292,7 @@ const Mentors = () => {
                 name={mentor.name}
                 info={mentor.info}
                 linkedin={mentor.linkedin}
+                github={mentor.github}
               />
             </Grid>
           );
@@ -303,15 +304,15 @@ const Mentors = () => {
 
 const useHeaderItemStyles = makeStyles(theme => ({
   title: {
-    fontSize: 18
+    fontSize: 20
   },
   headerCard: {
     marginBottom: theme.spacing(2),
-    backgroundColor: "#fafafa"
+    backgroundColor: "#fff9c4"
   }
 }));
 
-const HeaderItem = ({ title, description, actionFn }) => {
+const HeaderItem = ({ title, actionFn }) => {
   const classes = useHeaderItemStyles();
 
   return (
@@ -323,9 +324,6 @@ const HeaderItem = ({ title, description, actionFn }) => {
           gutterBottom
         >
           {title}
-        </Typography>
-        <Typography variant="body2" component="p">
-          {description}
         </Typography>
       </CardContent>
       <CardActions>
@@ -350,9 +348,11 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary
   },
   headerLogo: {
-    width: "80%",
+    width: "70%",
     height: "fit - content",
-    padding: "inherit"
+    padding: "inherit",
+    display: "flex",
+    justifyContent: "center"
   },
   sponsorLogo: {
     width: "100px"
@@ -361,14 +361,16 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
-    height: "100%"
+    height: "100%",
+    backgroundColor: "yellow"
+  },
+  leftMenu: {
+    backgroundColor: "yellow"
   },
   divider: {
-    marginTop: "15px",
     marginBottom: "15px"
   },
   footer: {
-    backgroundColor: "#eeeeee",
     padding: theme.spacing(3),
     textAlign: "center"
   }
@@ -379,70 +381,57 @@ const Home = () => {
   const [display, setDisplay] = useState(ABOUT);
 
   return (
-    <div className={classes.root}>
+    <>
       <Grid container spacing={3}>
-        <Grid item xs={5}>
+        <Grid item xs={5} className={classes.leftMenu}>
           <img src={logo} className={classes.headerLogo} />
         </Grid>
         <Grid item xs={7} className={classes.rightMenu}>
           <Box className={classes.headerLine}>
-            <HeaderItem
-              title="About"
-              description="Some default text to fill some space, and something more so there is
-            more text"
-              actionFn={() => setDisplay(ABOUT)}
-            />
+            <HeaderItem title="About" actionFn={() => setDisplay(ABOUT)} />
             <HeaderItem
               title="Register"
-              description="Some default text to fill some space, and something more so there is
-            more text"
               actionFn={() => setDisplay(REGISTER)}
             />
           </Box>
           <Box className={classes.headerLine}>
             <HeaderItem
               title="Rules & Prize"
-              description="Some default text to fill some space, and something more so there is
-            more text"
               actionFn={() => setDisplay(RULES_PRIZES)}
             />
-            <HeaderItem
-              title="Mentors"
-              description="Some default text to fill some space, and something more so there is
-            more text"
-              actionFn={() => setDisplay(MENTORS)}
-            />
+            <HeaderItem title="Mentors" actionFn={() => setDisplay(MENTORS)} />
           </Box>
         </Grid>
       </Grid>
-      <Divider className={classes.divider} />
-      <Box display={display === ABOUT ? "block" : "none"}>
-        <About registerFn={() => setDisplay(REGISTER)} />
-      </Box>
-      <Box display={display === RULES_PRIZES ? "block" : "none"}>
-        <RulesAndPrize registerFn={() => setDisplay(REGISTER)} />
-      </Box>
-      <Box display={display === REGISTER ? "block" : "none"}>
-        <Register />
-      </Box>
-      <Box display={display === MENTORS ? "block" : "none"}>
-        <Mentors />
-      </Box>
-      <footer className={classes.footer}>
-        <Divider className={classes.divider} />
-        <Typography variant="h3" component="h1" gutterBottom>
-          Sponsors
-        </Typography>
-        <Box pt="10px">
-          <a href="https://coinsquare.com/" target="_blank">
-            <img src={coinsquareLogo} className={classes.sponsorLogo} />
-            {/* <Typography variant="caption" display="block" gutterBottom>
+      <div className={classes.root}>
+        <Box display={display === ABOUT ? "block" : "none"}>
+          <About registerFn={() => setDisplay(REGISTER)} />
+        </Box>
+        <Box display={display === RULES_PRIZES ? "block" : "none"}>
+          <RulesAndPrize registerFn={() => setDisplay(REGISTER)} />
+        </Box>
+        <Box display={display === REGISTER ? "block" : "none"}>
+          <Register />
+        </Box>
+        <Box display={display === MENTORS ? "block" : "none"}>
+          <Mentors />
+        </Box>
+        <footer className={classes.footer}>
+          <Divider className={classes.divider} />
+          <Typography variant="h3" component="h1" gutterBottom>
+            Sponsors
+          </Typography>
+          <Box pt="10px">
+            <a href="https://coinsquare.com/" target="_blank">
+              <img src={coinsquareLogo} className={classes.sponsorLogo} />
+              {/* <Typography variant="caption" display="block" gutterBottom>
               Coinsquare
             </Typography> */}
-          </a>
-        </Box>
-      </footer>
-    </div>
+            </a>
+          </Box>
+        </footer>
+      </div>
+    </>
   );
 };
 
