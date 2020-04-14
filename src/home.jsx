@@ -30,7 +30,7 @@ const MENTORS_LIST = [
     info:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
     linkedin: "https://www.linkedin.com/in/daniloqueiroz/",
-    gitHub: "https://github.com/daniloqueiroz"
+    github: "https://github.com/daniloqueiroz"
   },
   {
     image: fran,
@@ -226,7 +226,7 @@ const mentorCardStyles = makeStyles(theme => ({
   root: {
     maxWidth: 445,
     backgroundColor: "#fafafa",
-    margin: theme.spacing(0),
+    margin: theme.spacing(0)
   },
   media: {
     height: 300
