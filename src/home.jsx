@@ -153,27 +153,25 @@ const About = ({ registerFn }) => {
           About
         </Typography>
         <Typography variant="body1" gutterBottom>
-          body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-          blanditiis tenetur unde suscipit, quam beatae rerum inventore
-          consectetur, neque doloribus, cupiditate numquam dignissimos laborum
-          fugiat deleniti? Eum quasi quidem quibusdam.body1. Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde
-          suscipit, quam beatae rerum inventore consectetur, neque doloribus,
-          cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi
-          quidem quibusdam.
-        </Typography>
-        <Typography variant="h5" component="h2" gutterBottom>
-          Why? When?
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-          blanditiis tenetur unde suscipit, quam beatae rerum inventore
-          consectetur, neque doloribus, cupiditate numquam dignissimos laborum
-          fugiat deleniti? Eum quasi quidem quibusdam. body1. Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde
-          suscipit, quam beatae rerum inventore consectetur, neque doloribus,
-          cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi
-          quidem quibusdam.
+          Hacking from Home is your chance to make a difference during the
+          quarantine. It is a virtual hackathon organised by a group of local
+          developers that, worrying about the impact of Covid-19 in our
+          community, wanted to find something to mobilise it.
+          <br />
+          Focusing on social distancing issues, Hacking from Home challenges
+          teams of 3 to 5 people to come up with solutions that will help people
+          to deal with the isolation caused by the measures to combat the virus.
+          <br />
+          The hackathon will take place from the 24th to the 26th of April and
+          will be completely remote. Teams will be invited to join the event’s
+          Slack workspace where they will be introduced to the mentors and will
+          be able to book conversations with them. Since we can’t be in the
+          frontline with the doctors, wipe the dust off, gather your team and
+          come to be the rearline in the fight against Covid-19! From there we
+          can contribute to make life easier in our community.
+          <br />
+          <br />
+          Register Now!
         </Typography>
       </Grid>
       <Grid item xs={4}>
@@ -190,34 +188,67 @@ const RulesAndPrize = ({ registerFn }) => {
         <Typography variant="h3" component="h1" gutterBottom>
           Rules & Prize
         </Typography>
+        <Typography variant="body1" gutterBottom>
+          In order to make it a fair and respectful competition, we have a few
+          set of rules:
+        </Typography>
         <Typography variant="h6" component="h2" gutterBottom>
-          Rules
+          Rulebook
         </Typography>
         <Typography variant="body1" gutterBottom>
-          <ul>
-            <li>All code must be open source</li>
-            <li>Teams must be 3 to 5 people</li>
-            <li>The solution must be related to Social Distancing/COVID-19</li>
-            <li>All docs should be in English</li>
-          </ul>
+          All code developed during the Hackathon must be open source; Teams
+          must from 3 to 5 people; The solution must be related to Social
+          Distancing / COVID-19 / Remote Work; All documentation, code and other
+          materials must English as an official language; Every participant,
+          mentor and organization staff must follow the Code of Conduct below;
+        </Typography>
+        <Typography variant="h6" component="h2" gutterBottom>
+          Code of Conduct
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          By participating in the Hack From Home event, you agree to abide by
+          the following code of conduct.
+          <br />
+          Please treat all other hackers with the utmost respect. We ask that
+          you act kindly, behave professionally, and do not insult or put down
+          other attendees. Remember that harassment and racist, sexist, or
+          exclusionary jokes are not appropriate for this event. If at any point
+          you see a fellow hacker being harassed, please talk to any hackathon
+          organizer using the Slack group (check the [Staff] tag on Mentors
+          page) or send an email to WHATS_THE_EMAIL@HACKINGFROMHOME.CA .
+          <br />
+          <br />
+          Please treat our sponsors, organizers, and judges with the utmost
+          respect. Without them, nothing would be possible. Consider taking some
+          time out of your work to go meet and speak with them. If they come
+          over to talk to you, we ask that you give them a bit of your time.
+          They're here for you! Show them you appreciate it.
+          <br />
+          <br />
+          Failure to comply with the above-stated Rules and Code of Conduct may
+          result in the offending team's disqualification, and mentor or staff
+          expulsion.
         </Typography>
         <Typography variant="h6" component="h2" gutterBottom>
           Grading Criteria
         </Typography>
-        <Typography variant="body1" gutterBottom>
-          <ul>
-            <li>Compliance to the rules</li>
-            <li>Completeness / Readiness</li>
-            <li>Applicability</li>
-            <li>User experience</li>
-            <li>Read me/ docs</li>
-          </ul>
-        </Typography>
+        At the end of the event, the mentors will use the following criteria to
+        grade the projects. Each item will receive a note from 0 to 10.
+        <br />
+        <ul>
+          <li>Compliance to the rules above</li>
+          <li>Completeness / Readiness</li>
+          <li>Applicability</li>
+          <li>User experience</li>
+          <li>Read-me (Github) / overall documentation</li>
+        </ul>
         <Typography variant="h6" component="h2" gutterBottom>
           Prize
         </Typography>
         <Typography variant="body1" gutterBottom>
-          1 ETH Coin
+          In partnership with Coinsquare, we're giving 1 (one) ETH crypto coin
+          to the winning team. Also the winning team's project will appear on
+          all our Social Media channels.
         </Typography>
       </Grid>
       <Grid item xs={4}>
