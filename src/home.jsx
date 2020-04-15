@@ -50,19 +50,19 @@ const MENTORS_LIST = [
   {
     image: gabriela,
     type: "Mentor",
-    name: "Gabriela",
+    name: "Gabriela Navarro",
     info:
       "Gabriela Navarro is a DevOps Engineer at Coinsquare. She has 5 years of experience in Software Engineering as a backend and DevOps engineer.",
-    linkedin: "",
-    github: ""
+    linkedin: "https://www.linkedin.com/in/gabrielamnavarro/",
+    github: "https://github.com/gabrielanavarro"
   },
   {
     image: martin,
     type: "Mentor",
-    name: "Martin",
+    name: "Martin Kuplens-Ewart",
     info:
       "Martin Kuplens-Ewart is a product manager, currently working in the fintech sector. He has over 20 years experience shaping and creating web-based software for community, collaboration, and celebration.",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/mkuplens/",
     github: ""
   },
   {
