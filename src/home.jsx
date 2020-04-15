@@ -12,9 +12,7 @@ import {
   makeStyles,
   Typography,
   AppBar,
-  Toolbar,
-  Menu,
-  MenuItem
+  Toolbar
 } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -33,32 +31,29 @@ const MENTORS_LIST = [
   {
     image: "https://avatars3.githubusercontent.com/u/410616",
     name: "Danilo Penna Queiroz",
-    info:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+    info: "Tech Lead at Coinsquare",
     linkedin: "https://www.linkedin.com/in/daniloqueiroz/",
     github: "https://github.com/daniloqueiroz"
   },
   {
     image: fran,
     name: "Franchesca Tingting",
-    info:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+    info: "Senior Product Designer at EventMobi",
     linkedin: "https://www.linkedin.com/in/franchescatingting/",
-    github: "hah"
+    github: "https://www.linkedin.com/in/franchescatingting/"
   },
   {
     image: leo,
     name: "Leonardo Lima",
     info:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+      "Software Developer and Journalist. The reason why I wake up every morning is to work & collaborate with meaningful, multidisciplinary and empathetic projects. More about me & my work @ https://leosl.github.io",
     linkedin: "https://www.linkedin.com/in/leosilvalima/",
     github: "https://github.com/LeoSL"
   },
   {
     image: "https://avatars0.githubusercontent.com/u/2237774",
     name: "Lucas Furtado",
-    info:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Software Developer at Nulogy",
+    info: "Software Engineer at EventMobi",
     linkedin: "https://www.linkedin.com/in/lucasslf/",
     github: "https://github.com/lucasslf"
   },
@@ -196,11 +191,24 @@ const RulesAndPrize = ({ registerFn }) => {
           Rulebook
         </Typography>
         <Typography variant="body1" gutterBottom>
-          All code developed during the Hackathon must be open source; Teams
-          must from 3 to 5 people; The solution must be related to Social
-          Distancing / COVID-19 / Remote Work; All documentation, code and other
-          materials must English as an official language; Every participant,
-          mentor and organization staff must follow the Code of Conduct below;
+          <ol>
+            <li>
+              All code developed during the Hackathon must be open source;
+            </li>
+            <li>Teams must from 3 to 5 people;</li>
+            <li>
+              The solution must be related to Social Distancing / COVID-19 /
+              Remote Work;
+            </li>
+            <li>
+              All documentation, code and other materials must English as an
+              official language;
+            </li>
+            <li>
+              Every participant, mentor and organization staff must follow the
+              Code of Conduct below;
+            </li>
+          </ol>
         </Typography>
         <Typography variant="h6" component="h2" gutterBottom>
           Code of Conduct
@@ -208,26 +216,30 @@ const RulesAndPrize = ({ registerFn }) => {
         <Typography variant="body1" gutterBottom>
           By participating in the Hack From Home event, you agree to abide by
           the following code of conduct.
-          <br />
-          Please treat all other hackers with the utmost respect. We ask that
-          you act kindly, behave professionally, and do not insult or put down
-          other attendees. Remember that harassment and racist, sexist, or
-          exclusionary jokes are not appropriate for this event. If at any point
-          you see a fellow hacker being harassed, please talk to any hackathon
-          organizer using the Slack group (check the [Staff] tag on Mentors
-          page) or send an email to WHATS_THE_EMAIL@HACKINGFROMHOME.CA .
-          <br />
-          <br />
-          Please treat our sponsors, organizers, and judges with the utmost
-          respect. Without them, nothing would be possible. Consider taking some
-          time out of your work to go meet and speak with them. If they come
-          over to talk to you, we ask that you give them a bit of your time.
-          They're here for you! Show them you appreciate it.
-          <br />
-          <br />
-          Failure to comply with the above-stated Rules and Code of Conduct may
-          result in the offending team's disqualification, and mentor or staff
-          expulsion.
+          <ol>
+            <li>
+              Please treat all other hackers with the utmost respect. We ask
+              that you act kindly, behave professionally, and do not insult or
+              put down other attendees. Remember that harassment and racist,
+              sexist, or exclusionary jokes are not appropriate for this event.
+              If at any point you see a fellow hacker being harassed, please
+              talk to any hackathon organizer using the Slack group (check the
+              [Staff] tag on Mentors page) or send an email to
+              contact@hackingfromhome.ca.
+            </li>
+            <li>
+              Please treat our sponsors, organizers, and judges with the utmost
+              respect. Without them, nothing would be possible. Consider taking
+              some time out of your work to go meet and speak with them. If they
+              come over to talk to you, we ask that you give them a bit of your
+              time. They're here for you! Show them you appreciate it.
+            </li>
+          </ol>
+          <strong>
+            Failure to comply with the above-stated Rules and Code of Conduct
+            may result in the offending team's disqualification, and mentor or
+            staff expulsion.
+          </strong>
         </Typography>
         <Typography variant="h6" component="h2" gutterBottom>
           Grading Criteria
@@ -260,9 +272,12 @@ const RulesAndPrize = ({ registerFn }) => {
 
 const mentorCardStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 445,
+    width: 445,
     backgroundColor: "#fafafa",
     margin: theme.spacing(0)
+  },
+  content: {
+    height: 130
   },
   media: {
     height: 400
@@ -280,7 +295,7 @@ const MentorCard = ({ image, name, info, linkedin, github }) => {
           image={image}
           title="mentor photo"
         />
-        <CardContent>
+        <CardContent className={classes.content}>
           <Typography gutterBottom variant="h5" component="h2">
             {name}
           </Typography>
