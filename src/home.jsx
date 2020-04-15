@@ -22,6 +22,8 @@ import farinazzo from "./farinazzo.png";
 import coinsquareLogo from "./coinsquare_transparent.png";
 import leo from "./leo.jpg";
 import luciano from "./luciano.png";
+import gabriela from "./gabriela.jpg";
+import martin from "./martin.jpg";
 
 const ABOUT = "about";
 const RULES_PRIZES = "rulesAndPrizes";
@@ -44,6 +46,22 @@ const MENTORS_LIST = [
     info: "Senior Product Designer at EventMobi",
     linkedin: "https://www.linkedin.com/in/franchescatingting/",
     github: "https://www.linkedin.com/in/franchescatingting/"
+  },
+  {
+    image: gabriela,
+    type: "Mentor",
+    name: "Gabriela",
+    info: "",
+    linkedin: "",
+    github: ""
+  },
+  {
+    image: martin,
+    type: "Mentor",
+    name: "Martin",
+    info: "",
+    linkedin: "",
+    github: ""
   },
   {
     image: "https://avatars3.githubusercontent.com/u/410616",
