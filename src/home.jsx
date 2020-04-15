@@ -51,7 +51,8 @@ const MENTORS_LIST = [
     image: gabriela,
     type: "Mentor",
     name: "Gabriela",
-    info: "",
+    info:
+      "Gabriela Navarro is a DevOps Engineer at Coinsquare. She has 5 years of experience in Software Engineering as a backend and DevOps engineer.",
     linkedin: "",
     github: ""
   },
@@ -59,7 +60,8 @@ const MENTORS_LIST = [
     image: martin,
     type: "Mentor",
     name: "Martin",
-    info: "",
+    info:
+      "Martin Kuplens-Ewart is a product manager, currently working in the fintech sector. He has over 20 years experience shaping and creating web-based software for community, collaboration, and celebration.",
     linkedin: "",
     github: ""
   },
@@ -312,7 +314,7 @@ const mentorCardStyles = makeStyles(theme => ({
   }
 }));
 
-const MentorCard = ({ image, type, name, info, linkedin, github }) => {
+const MentorCard = ({ image, name, type, info, linkedin, github }) => {
   const classes = mentorCardStyles();
 
   return (
@@ -325,10 +327,10 @@ const MentorCard = ({ image, type, name, info, linkedin, github }) => {
         />
         <CardContent className={classes.content}>
           <Typography gutterBottom variant="h5" component="h2">
-            {type}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
             {name}
+          </Typography>
+          <Typography gutterBottom variant="h6" component="h2">
+            {type}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {info}
