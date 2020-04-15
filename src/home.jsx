@@ -29,21 +29,33 @@ const REGISTER = "register";
 const MENTORS = "mentors";
 const MENTORS_LIST = [
   {
-    image: "https://avatars3.githubusercontent.com/u/410616",
-    name: "Danilo Penna Queiroz",
-    info: "Tech Lead at Coinsquare",
-    linkedin: "https://www.linkedin.com/in/daniloqueiroz/",
-    github: "https://github.com/daniloqueiroz"
+    image: farinazzo,
+    type: "Mentor",
+    name: "Raphael Farinazzo",
+    info:
+      "Raphael Farinazzo is an entrepreneur, acting in the events business, as well as in software's. He has 15 years of experience in Marketing and Technology, specially  Product Management. He's also Head of Product at Involves, a trade promotion / merchandising SaaS scale-up.",
+    linkedin: "https://www.linkedin.com/in/rfarinazzo/",
+    github: "https://github.com/rfarinazzo"
   },
   {
     image: fran,
+    type: "Mentor",
     name: "Franchesca Tingting",
     info: "Senior Product Designer at EventMobi",
     linkedin: "https://www.linkedin.com/in/franchescatingting/",
     github: "https://www.linkedin.com/in/franchescatingting/"
   },
   {
+    image: "https://avatars3.githubusercontent.com/u/410616",
+    type: "Mentor/STAFF",
+    name: "Danilo Penna Queiroz",
+    info: "Tech Lead at Coinsquare",
+    linkedin: "https://www.linkedin.com/in/daniloqueiroz/",
+    github: "https://github.com/daniloqueiroz"
+  },
+  {
     image: leo,
+    type: "Mentor/STAFF",
     name: "Leonardo Lima",
     info:
       "Software Developer and Journalist. The reason why I wake up every morning is to work & collaborate with meaningful, multidisciplinary and empathetic projects. More about me & my work @ https://leosl.github.io",
@@ -52,6 +64,7 @@ const MENTORS_LIST = [
   },
   {
     image: "https://avatars0.githubusercontent.com/u/2237774",
+    type: "Mentor/STAFF",
     name: "Lucas Furtado",
     info: "Software Engineer at EventMobi",
     linkedin: "https://www.linkedin.com/in/lucasslf/",
@@ -59,19 +72,12 @@ const MENTORS_LIST = [
   },
   {
     image: luciano,
+    type: "Mentor/STAFF",
     name: "Luciano Medeiros Marcelino",
     info:
       "Luciano is a full stack software developer with experience with different products in different level of maturities. He's focused on Ruby on Rails applications and is currently working with Rest and GraphQL APIs.",
     linkedin: "https://www.linkedin.com/in/marcelinoluciano/",
     github: "https://github.com/marcelinol"
-  },
-  {
-    image: farinazzo,
-    name: "Raphael Farinazzo",
-    info:
-      "Raphael Farinazzo is an entrepreneur, acting in the events business, as well as in software's. He has 15 years of experience in Marketing and Technology, specially  Product Management. He's also Head of Product at Involves, a trade promotion / merchandising SaaS scale-up.",
-    linkedin: "https://www.linkedin.com/in/rfarinazzo/",
-    github: "https://github.com/rfarinazzo"
   }
 ];
 
@@ -281,14 +287,14 @@ const mentorCardStyles = makeStyles(theme => ({
     margin: theme.spacing(0)
   },
   content: {
-    minHeight: 130,
+    minHeight: 180
   },
   media: {
     height: 400
   }
 }));
 
-const MentorCard = ({ image, name, info, linkedin, github }) => {
+const MentorCard = ({ image, type, name, info, linkedin, github }) => {
   const classes = mentorCardStyles();
 
   return (
@@ -301,6 +307,9 @@ const MentorCard = ({ image, name, info, linkedin, github }) => {
         />
         <CardContent className={classes.content}>
           <Typography gutterBottom variant="h5" component="h2">
+            {type}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="h2">
             {name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -310,10 +319,10 @@ const MentorCard = ({ image, name, info, linkedin, github }) => {
       </CardActionArea>
       <CardActions>
         <a href={linkedin} target="_blank">
-          <LinkedInIcon></LinkedInIcon>
+          <LinkedInIcon color="primary" fontSize="large"></LinkedInIcon>
         </a>
         <a href={github} target="_blank">
-          <GitHubIcon></GitHubIcon>
+          <GitHubIcon color="primary" fontSize="large"></GitHubIcon>
         </a>
       </CardActions>
     </Card>
@@ -343,6 +352,7 @@ const Mentors = () => {
             <Grid item xs={3} className={classes.row}>
               <MentorCard
                 image={mentor.image}
+                type={mentor.type}
                 name={mentor.name}
                 info={mentor.info}
                 linkedin={mentor.linkedin}
