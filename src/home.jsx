@@ -281,7 +281,7 @@ const mentorCardStyles = makeStyles(theme => ({
     margin: theme.spacing(0)
   },
   content: {
-    height: 130
+    minHeight: 130,
   },
   media: {
     height: 400
