@@ -43,7 +43,8 @@ const MENTORS_LIST = [
     image: fran,
     type: "Mentor",
     name: "Franchesca Tingting",
-    info: "Senior Product Designer at EventMobi",
+    info:
+      "Franchesca Tingting is a Product Designer with 5+ years experience spanning various industries including Events-, Health-, and Ad-Tech.",
     linkedin: "https://www.linkedin.com/in/franchescatingting/",
     github: "https://www.linkedin.com/in/franchescatingting/"
   },
@@ -69,7 +70,8 @@ const MENTORS_LIST = [
     image: "https://avatars3.githubusercontent.com/u/410616",
     type: "Mentor/STAFF",
     name: "Danilo Penna Queiroz",
-    info: "Tech Lead at Coinsquare",
+    info:
+      "Backend engineer, Linux freak, air drummer.Over the last 10 years Danilo has worked on multiple startups,from Unicorns, to self funded garage startups in Germany, Brazil and Canada.Being a problem solver and team player, he started getting more and more involved with both technical and organizational aspects of software development.",
     linkedin: "https://www.linkedin.com/in/daniloqueiroz/",
     github: "https://github.com/daniloqueiroz"
   },
@@ -86,7 +88,8 @@ const MENTORS_LIST = [
     image: "https://avatars0.githubusercontent.com/u/2237774",
     type: "Mentor/STAFF",
     name: "Lucas Furtado",
-    info: "Software Engineer at EventMobi",
+    info:
+      "Lucas has been thriving in the software industry from the times of Java, SQL and Rock'n'roll, when coding used to be a typing contest to the times of Python on startups, when coding became writing indecipherable stuff. He has 15 years of diverse experience in software engineering divided between CMMI certified software houses, multinational enterprises and small fast-paced startups.",
     linkedin: "https://www.linkedin.com/in/lucasslf/",
     github: "https://github.com/lucasslf"
   },
@@ -307,7 +310,7 @@ const mentorCardStyles = makeStyles(theme => ({
     margin: theme.spacing(0)
   },
   content: {
-    minHeight: 180
+    minHeight: 300
   },
   media: {
     height: 400
@@ -332,7 +335,7 @@ const MentorCard = ({ image, name, type, info, linkedin, github }) => {
           <Typography gutterBottom variant="h6" component="h2">
             {type}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body1" color="textSecondary" component="p">
             {info}
           </Typography>
         </CardContent>
