@@ -147,15 +147,17 @@ const About = ({ registerFn }) => {
         <Typography variant="h3" component="h1" gutterBottom>
           About
         </Typography>
-        <Typography variant="body1" gutterBottom>
+        <Typography variant="body1" align="justify" gutterBottom>
           Hacking from Home is your chance to make a difference during the
           quarantine. It is a virtual hackathon organised by a group of local
           developers that, worrying about the impact of Covid-19 in our
           community, wanted to find something to mobilise it.
           <br />
+          <br />
           Focusing on social distancing issues, Hacking from Home challenges
           teams of 3 to 5 people to come up with solutions that will help people
           to deal with the isolation caused by the measures to combat the virus.
+          <br />
           <br />
           The hackathon will take place from the 24th to the 26th of April and
           will be completely remote. Teams will be invited to join the event’s
@@ -183,14 +185,14 @@ const RulesAndPrize = ({ registerFn }) => {
         <Typography variant="h3" component="h1" gutterBottom>
           Rules & Prize
         </Typography>
-        <Typography variant="body1" gutterBottom>
+        <Typography variant="body1" align="justify" gutterBottom>
           In order to make it a fair and respectful competition, we have a few
           set of rules:
         </Typography>
         <Typography variant="h6" component="h2" gutterBottom>
           Rulebook
         </Typography>
-        <Typography variant="body1" gutterBottom>
+        <Typography variant="body1" align="justify" gutterBottom>
           <ol>
             <li>
               All code developed during the Hackathon must be open source;
@@ -213,7 +215,7 @@ const RulesAndPrize = ({ registerFn }) => {
         <Typography variant="h6" component="h2" gutterBottom>
           Code of Conduct
         </Typography>
-        <Typography variant="body1" gutterBottom>
+        <Typography variant="body1" align="justify" gutterBottom>
           By participating in the Hack From Home event, you agree to abide by
           the following code of conduct.
           <ol>
@@ -240,6 +242,8 @@ const RulesAndPrize = ({ registerFn }) => {
             may result in the offending team's disqualification, and mentor or
             staff expulsion.
           </strong>
+          <br />
+          <br />
         </Typography>
         <Typography variant="h6" component="h2" gutterBottom>
           Grading Criteria
@@ -257,7 +261,7 @@ const RulesAndPrize = ({ registerFn }) => {
         <Typography variant="h6" component="h2" gutterBottom>
           Prize
         </Typography>
-        <Typography variant="body1" gutterBottom>
+        <Typography variant="body1" align="justify" gutterBottom>
           In partnership with Coinsquare, we're giving 1 (one) ETH crypto coin
           to the winning team. Also the winning team's project will appear on
           all our Social Media channels.
