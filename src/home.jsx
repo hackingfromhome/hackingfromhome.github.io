@@ -127,7 +127,7 @@ const RegisterButton = ({ registerFn }) => {
         variant="button"
         size="large"
         width="60%"
-        backgroundColor="yellow"
+        backgroundColor="#fcff4a"
         fullWidth
         block
         gutterBottom
@@ -437,10 +437,10 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "row",
     justifyContent: "space-evenly",
     height: "100%",
-    backgroundColor: "yellow"
+    backgroundColor: "#fcff4a"
   },
   appBar: {
-    backgroundColor: "yellow"
+    backgroundColor: "#fcff4a"
   },
   divider: {
     marginBottom: "15px"
