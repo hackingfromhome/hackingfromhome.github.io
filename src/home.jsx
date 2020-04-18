@@ -511,31 +511,31 @@ const Home = () => {
           </Box>
         </Toolbar>
       </AppBar>
-      {/* <div className={classes.root}> */}
-      <Box display={display === ABOUT ? "block" : "none"}>
-        <About registerFn={() => setDisplay(REGISTER)} />
-      </Box>
-      <Box display={display === RULES_PRIZES ? "block" : "none"}>
-        <RulesAndPrize registerFn={() => setDisplay(REGISTER)} />
-      </Box>
-      <Box display={display === REGISTER ? "block" : "none"}>
-        <Register />
-      </Box>
-      <Box display={display === MENTORS ? "block" : "none"}>
-        <Mentors />
-      </Box>
-      <footer className={classes.footer}>
-        <Divider className={classes.divider} />
-        <Typography variant="h3" component="h1" gutterBottom>
-          Sponsors
-        </Typography>
-        <Box pt="10px">
-          <a href="https://coinsquare.com/" target="_blank">
-            <img src={coinsquareLogo} className={classes.sponsorLogo} />
-          </a>
+      <div className={classes.root}>
+        <Box display={display === ABOUT ? "block" : "none"}>
+          <About registerFn={() => setDisplay(REGISTER)} />
         </Box>
-      </footer>
-      {/* </div> */}
+        <Box display={display === RULES_PRIZES ? "block" : "none"}>
+          <RulesAndPrize registerFn={() => setDisplay(REGISTER)} />
+        </Box>
+        <Box display={display === REGISTER ? "block" : "none"}>
+          <Register />
+        </Box>
+        <Box display={display === MENTORS ? "block" : "none"}>
+          <Mentors />
+        </Box>
+        <footer className={classes.footer}>
+          <Divider className={classes.divider} />
+          <Typography variant="h3" component="h1" gutterBottom>
+            Sponsors
+          </Typography>
+          <Box pt="10px">
+            <a href="https://coinsquare.com/" target="_blank">
+              <img src={coinsquareLogo} className={classes.sponsorLogo} />
+            </a>
+          </Box>
+        </footer>
+      </div>
     </>
   );
 };
