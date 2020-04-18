@@ -114,11 +114,11 @@ const Register = () => {
   const classes = registerStyles();
   return (
     <Grid container spacing={3}>
-      <Grid item xs={6}>
+      <Grid item xs={12}>
         <Box p="30px">
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSedJfn1pVqKisP3fByc-_WfJfUhsB2Cmx1OtLZOY_2tFOOoUw/viewform?embedded=true"
-            width="640"
+            width="100%"
             height="650"
             frameborder="0"
             marginheight="0"
