@@ -305,9 +305,8 @@ const RulesAndPrize = ({ registerFn }) => {
 
 const mentorCardStyles = makeStyles(theme => ({
   root: {
-    width: 445,
     backgroundColor: "#fafafa",
-    margin: theme.spacing(0)
+    margin: theme.spacing(1)
   },
   content: {
     minHeight: 300
@@ -372,7 +371,7 @@ const Mentors = () => {
       <Grid container spacing={3}>
         {MENTORS_LIST.map((mentor, _index) => {
           return (
-            <Grid item xs={3} className={classes.row}>
+            <Grid item xs={12} sm={6} md={4} lg={4} className={classes.row}>
               <MentorCard
                 image={mentor.image}
                 type={mentor.type}
@@ -445,8 +444,8 @@ const HeaderItem = ({ title, actionFn }) => {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    paddingLeft: theme.spacing(12),
-    paddingRight: theme.spacing(12),
+    paddingLeft: "5%",
+    paddingRight: "5%",
     paddingBottom: theme.spacing(3),
     paddingTop: theme.spacing(3),
     backgroundColor: "#eeeeee"
