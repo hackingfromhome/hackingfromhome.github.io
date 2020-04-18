@@ -172,7 +172,7 @@ const RegisterButton = ({ registerFn }) => {
 const About = ({ registerFn }) => {
   return (
     <Grid container spacing={3}>
-      <Grid item xs={8}>
+      <Grid item xs={12} sm={12} md={8} lg={8}>
         <Typography variant="h3" component="h1" gutterBottom>
           About
         </Typography>
@@ -200,7 +200,7 @@ const About = ({ registerFn }) => {
           Register Now!
         </Typography>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={12} sm={12} md={4} ld={4}>
         <RegisterButton registerFn={registerFn} />
       </Grid>
     </Grid>
