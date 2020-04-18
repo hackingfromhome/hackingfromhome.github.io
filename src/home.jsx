@@ -342,7 +342,7 @@ const MentorCard = ({ image, name, type, info, linkedin, github }) => {
         </a>
         {github &&
             <a href={github} target="_blank">
-              <GitHubIcon fontSize="large"></GitHubIcon>
+              <GitHubIcon fontSize="large" style={{ color: "black" }}></GitHubIcon>
             </a>
         }
       </CardActions>
