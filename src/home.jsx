@@ -433,7 +433,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary
   },
   headerLogo: {
-    width: "30%",
+    width: "100%",
     height: "fit - content",
     padding: "inherit",
     display: "flex",
@@ -469,23 +469,27 @@ const Home = () => {
     <>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
-          <img
-            src={logo}
-            className={classes.headerLogo}
-            alt="hacking from home logo"
-          />
-          <Box>
-            <HeaderItem title="About" actionFn={() => setDisplay(ABOUT)} />
-            <HeaderItem
-              title="Register"
-              actionFn={() => setDisplay(REGISTER)}
-            />
-            <HeaderItem
-              title="Rules & Prize"
-              actionFn={() => setDisplay(RULES_PRIZES)}
-            />
-            <HeaderItem title="Mentors" actionFn={() => setDisplay(MENTORS)} />
-          </Box>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={12} md={4}>
+              <img
+                src={logo}
+                className={classes.headerLogo}
+                alt="hacking from home logo"
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={3}>
+              <HeaderItem title="About" actionFn={() => setDisplay(ABOUT)} />
+              <HeaderItem
+                title="Register"
+                actionFn={() => setDisplay(REGISTER)}
+              />
+              <HeaderItem
+                title="Rules & Prize"
+                actionFn={() => setDisplay(RULES_PRIZES)}
+              />
+              <HeaderItem title="Mentors" actionFn={() => setDisplay(MENTORS)} />
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
       <div className={classes.root}>
