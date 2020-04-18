@@ -114,11 +114,11 @@ const Register = () => {
   const classes = registerStyles();
   return (
     <Grid container spacing={3}>
-      <Grid item xs={6}>
+      <Grid item xs={12}>
         <Box p="30px">
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSedJfn1pVqKisP3fByc-_WfJfUhsB2Cmx1OtLZOY_2tFOOoUw/viewform?embedded=true"
-            width="640"
+            width="100%"
             height="650"
             frameborder="0"
             marginheight="0"
@@ -172,7 +172,7 @@ const RegisterButton = ({ registerFn }) => {
 const About = ({ registerFn }) => {
   return (
     <Grid container spacing={3}>
-      <Grid item xs={8}>
+      <Grid item xs={12} sm={12} md={8} lg={8}>
         <Typography variant="h3" component="h1" gutterBottom>
           About
         </Typography>
@@ -200,7 +200,7 @@ const About = ({ registerFn }) => {
           Register Now!
         </Typography>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={12} sm={12} md={4} ld={4}>
         <RegisterButton registerFn={registerFn} />
       </Grid>
     </Grid>
@@ -210,7 +210,7 @@ const About = ({ registerFn }) => {
 const RulesAndPrize = ({ registerFn }) => {
   return (
     <Grid container spacing={3}>
-      <Grid item xs={8}>
+      <Grid item xs={12} md={8}>
         <Typography variant="h3" component="h1" gutterBottom>
           Rules & Prize
         </Typography>
@@ -296,7 +296,7 @@ const RulesAndPrize = ({ registerFn }) => {
           all our Social Media channels.
         </Typography>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={12} md={4}>
         <RegisterButton registerFn={registerFn} />
       </Grid>
     </Grid>
@@ -305,9 +305,8 @@ const RulesAndPrize = ({ registerFn }) => {
 
 const mentorCardStyles = makeStyles(theme => ({
   root: {
-    width: 445,
     backgroundColor: "#fafafa",
-    margin: theme.spacing(0)
+    margin: theme.spacing(1)
   },
   content: {
     minHeight: 300
@@ -372,7 +371,7 @@ const Mentors = () => {
       <Grid container spacing={3}>
         {MENTORS_LIST.map((mentor, _index) => {
           return (
-            <Grid item xs={3} className={classes.row}>
+            <Grid item xs={12} sm={6} md={4} lg={4} className={classes.row}>
               <MentorCard
                 image={mentor.image}
                 type={mentor.type}
@@ -421,32 +420,10 @@ const HeaderItem = ({ title, actionFn }) => {
   );
 };
 
-// <Card className={classes.headerCard}>
-//   {/* <CardContent>
-//     <Typography
-//       className={classes.title}
-//       color="textSecondary"
-//       gutterBottom
-//     >
-//       {title}
-//     </Typography>
-//   </CardContent> */}
-{
-  /*  <CardActions>
-//     <Button size="small" onClick={actionFn}>
-//       {/* Learn More */
-}
-//       <Typography variant="h5" component="h2" alignContent="center">
-//         {title}
-//       </Typography>
-//     </Button>
-//   </CardActions>
-// </Card> */}
-
 const useStyles = makeStyles(theme => ({
   root: {
-    paddingLeft: theme.spacing(12),
-    paddingRight: theme.spacing(12),
+    paddingLeft: "5%",
+    paddingRight: "5%",
     paddingBottom: theme.spacing(3),
     paddingTop: theme.spacing(3),
     backgroundColor: "#eeeeee"
@@ -456,7 +433,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary
   },
   headerLogo: {
-    width: "30%",
+    width: "100%",
     height: "fit - content",
     padding: "inherit",
     display: "flex",
@@ -492,50 +469,54 @@ const Home = () => {
     <>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
-          <img
-            src={logo}
-            className={classes.headerLogo}
-            alt="hacking from home logo"
-          />
-          <Box>
-            <HeaderItem title="About" actionFn={() => setDisplay(ABOUT)} />
-            <HeaderItem
-              title="Register"
-              actionFn={() => setDisplay(REGISTER)}
-            />
-            <HeaderItem
-              title="Rules & Prize"
-              actionFn={() => setDisplay(RULES_PRIZES)}
-            />
-            <HeaderItem title="Mentors" actionFn={() => setDisplay(MENTORS)} />
-          </Box>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={12} md={4}>
+              <img
+                src={logo}
+                className={classes.headerLogo}
+                alt="hacking from home logo"
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={3}>
+              <HeaderItem title="About" actionFn={() => setDisplay(ABOUT)} />
+              <HeaderItem
+                title="Register"
+                actionFn={() => setDisplay(REGISTER)}
+              />
+              <HeaderItem
+                title="Rules & Prize"
+                actionFn={() => setDisplay(RULES_PRIZES)}
+              />
+              <HeaderItem title="Mentors" actionFn={() => setDisplay(MENTORS)} />
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
-      {/* <div className={classes.root}> */}
-      <Box display={display === ABOUT ? "block" : "none"}>
-        <About registerFn={() => setDisplay(REGISTER)} />
-      </Box>
-      <Box display={display === RULES_PRIZES ? "block" : "none"}>
-        <RulesAndPrize registerFn={() => setDisplay(REGISTER)} />
-      </Box>
-      <Box display={display === REGISTER ? "block" : "none"}>
-        <Register />
-      </Box>
-      <Box display={display === MENTORS ? "block" : "none"}>
-        <Mentors />
-      </Box>
-      <footer className={classes.footer}>
-        <Divider className={classes.divider} />
-        <Typography variant="h3" component="h1" gutterBottom>
-          Sponsors
-        </Typography>
-        <Box pt="10px">
-          <a href="https://coinsquare.com/" target="_blank">
-            <img src={coinsquareLogo} className={classes.sponsorLogo} />
-          </a>
+      <div className={classes.root}>
+        <Box display={display === ABOUT ? "block" : "none"}>
+          <About registerFn={() => setDisplay(REGISTER)} />
         </Box>
-      </footer>
-      {/* </div> */}
+        <Box display={display === RULES_PRIZES ? "block" : "none"}>
+          <RulesAndPrize registerFn={() => setDisplay(REGISTER)} />
+        </Box>
+        <Box display={display === REGISTER ? "block" : "none"}>
+          <Register />
+        </Box>
+        <Box display={display === MENTORS ? "block" : "none"}>
+          <Mentors />
+        </Box>
+        <footer className={classes.footer}>
+          <Divider className={classes.divider} />
+          <Typography variant="h3" component="h1" gutterBottom>
+            Sponsors
+          </Typography>
+          <Box pt="10px">
+            <a href="https://coinsquare.com/" target="_blank">
+              <img src={coinsquareLogo} className={classes.sponsorLogo} />
+            </a>
+          </Box>
+        </footer>
+      </div>
     </>
   );
 };
