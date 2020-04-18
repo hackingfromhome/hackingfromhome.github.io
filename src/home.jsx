@@ -36,8 +36,7 @@ const MENTORS_LIST = [
     name: "Raphael Farinazzo",
     info:
       "Raphael Farinazzo is an entrepreneur, acting in the events business, as well as in software's. He has 15 years of experience in Marketing and Technology, specially  Product Management. He's also Head of Product at Involves, a trade promotion / merchandising SaaS scale-up.",
-    linkedin: "https://www.linkedin.com/in/rfarinazzo/",
-    github: "https://github.com/rfarinazzo"
+    linkedin: "https://www.linkedin.com/in/rfarinazzo/"
   },
   {
     image: fran,
@@ -45,8 +44,7 @@ const MENTORS_LIST = [
     name: "Franchesca Tingting",
     info:
       "Franchesca Tingting is a Product Designer with 5+ years experience spanning various industries including Events-, Health-, and Ad-Tech.",
-    linkedin: "https://www.linkedin.com/in/franchescatingting/",
-    github: "https://www.linkedin.com/in/franchescatingting/"
+    linkedin: "https://www.linkedin.com/in/franchescatingting/"
   },
   {
     image: gabriela,
@@ -63,8 +61,7 @@ const MENTORS_LIST = [
     name: "Martin Kuplens-Ewart",
     info:
       "Martin Kuplens-Ewart is a product manager, currently working in the fintech sector. He has over 20 years experience shaping and creating web-based software for community, collaboration, and celebration.",
-    linkedin: "https://www.linkedin.com/in/mkuplens/",
-    github: ""
+    linkedin: "https://www.linkedin.com/in/mkuplens/"
   },
   {
     image: "https://avatars3.githubusercontent.com/u/410616",
@@ -343,9 +340,11 @@ const MentorCard = ({ image, name, type, info, linkedin, github }) => {
         <a href={linkedin} target="_blank">
           <LinkedInIcon color="primary" fontSize="large"></LinkedInIcon>
         </a>
-        <a href={github} target="_blank">
-          <GitHubIcon color="primary" fontSize="large"></GitHubIcon>
-        </a>
+        {github &&
+            <a href={github} target="_blank">
+              <GitHubIcon fontSize="large"></GitHubIcon>
+            </a>
+        }
       </CardActions>
     </Card>
   );
