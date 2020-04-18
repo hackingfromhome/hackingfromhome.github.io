@@ -420,28 +420,6 @@ const HeaderItem = ({ title, actionFn }) => {
   );
 };
 
-// <Card className={classes.headerCard}>
-//   {/* <CardContent>
-//     <Typography
-//       className={classes.title}
-//       color="textSecondary"
-//       gutterBottom
-//     >
-//       {title}
-//     </Typography>
-//   </CardContent> */}
-{
-  /*  <CardActions>
-//     <Button size="small" onClick={actionFn}>
-//       {/* Learn More */
-}
-//       <Typography variant="h5" component="h2" alignContent="center">
-//         {title}
-//       </Typography>
-//     </Button>
-//   </CardActions>
-// </Card> */}
-
 const useStyles = makeStyles(theme => ({
   root: {
     paddingLeft: "5%",
