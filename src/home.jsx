@@ -210,7 +210,7 @@ const About = ({ registerFn }) => {
 const RulesAndPrize = ({ registerFn }) => {
   return (
     <Grid container spacing={3}>
-      <Grid item xs={8}>
+      <Grid item xs={12} md={8}>
         <Typography variant="h3" component="h1" gutterBottom>
           Rules & Prize
         </Typography>
@@ -296,7 +296,7 @@ const RulesAndPrize = ({ registerFn }) => {
           all our Social Media channels.
         </Typography>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={12} md={4}>
         <RegisterButton registerFn={registerFn} />
       </Grid>
     </Grid>
