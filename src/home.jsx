@@ -16,7 +16,7 @@ import {
 } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import logo from "./banner.png";
+import logo from "./banner.jpg";
 import fran from "./fran.png";
 import farinazzo from "./farinazzo.png";
 import coinsquareLogo from "./coinsquare_transparent.png";
@@ -24,6 +24,7 @@ import leo from "./leo.jpg";
 import luciano from "./luciano.png";
 import gabriela from "./gabriela.jpg";
 import martin from "./martin.jpg";
+import danilo from "./danilo.jpg";
 
 const ABOUT = "about";
 const RULES_PRIZES = "rulesAndPrizes";
@@ -64,7 +65,7 @@ const MENTORS_LIST = [
     linkedin: "https://www.linkedin.com/in/mkuplens/"
   },
   {
-    image: "https://avatars3.githubusercontent.com/u/410616",
+    image: danilo,
     type: "Mentor/STAFF",
     name: "Danilo Penna Queiroz",
     info:
@@ -135,7 +136,7 @@ const Register = () => {
 
 const buttonStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: "yellow",
+    backgroundColor: "#f9f14e",
     lineHeight: 1.5,
     height: "42px",
     "&:hover": {
@@ -153,7 +154,6 @@ const RegisterButton = ({ registerFn }) => {
         variant="button"
         size="large"
         width="60%"
-        backgroundColor="#fcff4a"
         fullWidth
         block
         gutterBottom
@@ -185,7 +185,7 @@ const About = ({ registerFn }) => {
           to deal with the isolation caused by the measures to combat the virus.
           <br />
           <br />
-          The hackathon will take place from the 24th to the 26th of April and
+          The hackathon will take place from the 1st to the 3rd of May and
           will be completely remote. Teams will be invited to join the event’s
           Slack workspace where they will be introduced to the mentors and will
           be able to book conversations with them. Since we can’t be in the
@@ -446,10 +446,10 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "row",
     justifyContent: "space-evenly",
     height: "100%",
-    backgroundColor: "#fcff4a"
+    backgroundColor: "#f9f14e"
   },
   appBar: {
-    backgroundColor: "#fcff4a"
+    backgroundColor: "#f9f14e"
   },
   divider: {
     marginBottom: "15px"
