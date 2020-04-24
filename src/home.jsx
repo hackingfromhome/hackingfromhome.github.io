@@ -79,7 +79,7 @@ const MENTORS_LIST = [
     type: "Mentor/STAFF",
     name: "Danilo Penna Queiroz",
     info:
-      "Backend engineer, Linux freak, air drummer.Over the last 10 years Danilo has worked on multiple startups,from Unicorns, to self funded garage startups in Germany, Brazil and Canada.Being a problem solver and team player, he started getting more and more involved with both technical and organizational aspects of software development.",
+      "Backend engineer, Linux freak, air drummer. Over the last 10 years Danilo has worked on multiple startups, from Unicorns, to self funded garage startups in Germany, Brazil and Canada. Being a problem solver and team player, he started getting more and more involved with both technical and organizational aspects of software development.",
     linkedin: "https://www.linkedin.com/in/daniloqueiroz/",
     github: "https://github.com/daniloqueiroz",
   },
