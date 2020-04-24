@@ -21,6 +21,7 @@ import fran from "./fran.png";
 import farinazzo from "./farinazzo.png";
 import coinsquareLogo from "./coinsquare_transparent.png";
 import leo from "./leo.jpg";
+import lucas from "./lucas.png";
 import luciano from "./luciano.png";
 import gabriela from "./gabriela.jpg";
 import martin from "./martin.jpg";
@@ -28,7 +29,7 @@ import danilo from "./danilo.jpg";
 
 const ABOUT = "about";
 const RULES_PRIZES = "rulesAndPrizes";
-const REGISTER = "register";
+const FAQ = "faq";
 const MENTORS = "mentors";
 const MENTORS_LIST = [
   {
@@ -37,7 +38,7 @@ const MENTORS_LIST = [
     name: "Raphael Farinazzo",
     info:
       "Raphael Farinazzo is an entrepreneur, acting in the events business, as well as in software's. He has 15 years of experience in Marketing and Technology, specially  Product Management. He's also Head of Product at Involves, a trade promotion / merchandising SaaS scale-up.",
-    linkedin: "https://www.linkedin.com/in/rfarinazzo/"
+    linkedin: "https://www.linkedin.com/in/rfarinazzo/",
   },
   {
     image: fran,
@@ -45,7 +46,7 @@ const MENTORS_LIST = [
     name: "Franchesca Tingting",
     info:
       "Franchesca Tingting is a Product Designer with 5+ years experience spanning various industries including Events-, Health-, and Ad-Tech.",
-    linkedin: "https://www.linkedin.com/in/franchescatingting/"
+    linkedin: "https://www.linkedin.com/in/franchescatingting/",
   },
   {
     image: gabriela,
@@ -54,7 +55,7 @@ const MENTORS_LIST = [
     info:
       "Gabriela Navarro is a DevOps Engineer at Coinsquare. She has 5 years of experience in Software Engineering as a backend and DevOps engineer.",
     linkedin: "https://www.linkedin.com/in/gabrielamnavarro/",
-    github: "https://github.com/gabrielanavarro"
+    github: "https://github.com/gabrielanavarro",
   },
   {
     image: martin,
@@ -62,7 +63,16 @@ const MENTORS_LIST = [
     name: "Martin Kuplens-Ewart",
     info:
       "Martin Kuplens-Ewart is a product manager, currently working in the fintech sector. He has over 20 years experience shaping and creating web-based software for community, collaboration, and celebration.",
-    linkedin: "https://www.linkedin.com/in/mkuplens/"
+    linkedin: "https://www.linkedin.com/in/mkuplens/",
+  },
+  {
+    image: lucas,
+    type: "Mentor",
+    name: "Lucas Alencar",
+    info:
+      "Lucas has been thriving in the software industry from the times of Java, SQL and Rock'n'roll, when coding used to be a typing contest to the times of Python on startups, when coding became writing indecipherable stuff. He has 15 years of diverse experience in software engineering divided between CMMI certified software houses, multinational enterprises and small fast-paced startups.",
+    linkedin: "https://www.linkedin.com/in/lucasandre/",
+    github: "https://github.com/lucasalencar",
   },
   {
     image: danilo,
@@ -71,7 +81,7 @@ const MENTORS_LIST = [
     info:
       "Backend engineer, Linux freak, air drummer.Over the last 10 years Danilo has worked on multiple startups,from Unicorns, to self funded garage startups in Germany, Brazil and Canada.Being a problem solver and team player, he started getting more and more involved with both technical and organizational aspects of software development.",
     linkedin: "https://www.linkedin.com/in/daniloqueiroz/",
-    github: "https://github.com/daniloqueiroz"
+    github: "https://github.com/daniloqueiroz",
   },
   {
     image: leo,
@@ -80,7 +90,7 @@ const MENTORS_LIST = [
     info:
       "Software Developer and Journalist. The reason why I wake up every morning is to work & collaborate with meaningful, multidisciplinary and empathetic projects. More about me & my work @ https://leosl.github.io",
     linkedin: "https://www.linkedin.com/in/leosilvalima/",
-    github: "https://github.com/LeoSL"
+    github: "https://github.com/LeoSL",
   },
   {
     image: "https://avatars0.githubusercontent.com/u/2237774",
@@ -89,7 +99,7 @@ const MENTORS_LIST = [
     info:
       "Lucas has been thriving in the software industry from the times of Java, SQL and Rock'n'roll, when coding used to be a typing contest to the times of Python on startups, when coding became writing indecipherable stuff. He has 15 years of diverse experience in software engineering divided between CMMI certified software houses, multinational enterprises and small fast-paced startups.",
     linkedin: "https://www.linkedin.com/in/lucasslf/",
-    github: "https://github.com/lucasslf"
+    github: "https://github.com/lucasslf",
   },
   {
     image: luciano,
@@ -98,54 +108,22 @@ const MENTORS_LIST = [
     info:
       "Luciano is a full stack software developer with experience with different products in different level of maturities. He's focused on Ruby on Rails applications and is currently working with Rest and GraphQL APIs.",
     linkedin: "https://www.linkedin.com/in/marcelinoluciano/",
-    github: "https://github.com/marcelinol"
-  }
+    github: "https://github.com/marcelinol",
+  },
 ];
 
-const registerStyles = makeStyles(theme => ({
-  frame: {
-    justifyContent: "center"
-  }
-}));
-
-const Register = () => {
-  const classes = registerStyles();
-  return (
-    <Grid container spacing={3}>
-      <Grid item xs={12}>
-        <Box p="30px">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSedJfn1pVqKisP3fByc-_WfJfUhsB2Cmx1OtLZOY_2tFOOoUw/viewform?embedded=true"
-            width="100%"
-            height="650"
-            frameborder="0"
-            marginheight="0"
-            className={classes.frame}
-            marginwidth="0"
-          >
-            Loading…
-          </iframe>
-        </Box>
-      </Grid>
-      <Grid item xs={6}>
-        <Box p="30px"></Box>
-      </Grid>
-    </Grid>
-  );
-};
-
-const buttonStyles = makeStyles(theme => ({
+const buttonStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#f9f14e",
     lineHeight: 1.5,
     height: "42px",
     "&:hover": {
-      backgroundColor: "#fff9c4"
-    }
-  }
+      backgroundColor: "#fff9c4",
+    },
+  },
 }));
 
-const RegisterButton = ({ registerFn }) => {
+const RegisterButton = () => {
   const classes = buttonStyles();
 
   return (
@@ -158,7 +136,8 @@ const RegisterButton = ({ registerFn }) => {
         block
         gutterBottom
         className={classes.root}
-        onClick={registerFn}
+        href="https://hopin.to/events/hacking-from-home"
+        target="blank"
       >
         Register
       </Button>
@@ -166,7 +145,7 @@ const RegisterButton = ({ registerFn }) => {
   );
 };
 
-const About = ({ registerFn }) => {
+const About = () => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={12} md={8} lg={8}>
@@ -198,13 +177,13 @@ const About = ({ registerFn }) => {
         </Typography>
       </Grid>
       <Grid item xs={12} sm={12} md={4} ld={4}>
-        <RegisterButton registerFn={registerFn} />
+        <RegisterButton />
       </Grid>
     </Grid>
   );
 };
 
-const RulesAndPrize = ({ registerFn }) => {
+const RulesAndPrize = () => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} md={8}>
@@ -294,7 +273,56 @@ const RulesAndPrize = ({ registerFn }) => {
         </Typography>
       </Grid>
       <Grid item xs={12} md={4}>
-        <RegisterButton registerFn={registerFn} />
+        <RegisterButton />
+      </Grid>
+    </Grid>
+  );
+};
+
+const faqStyles = makeStyles((theme) => ({
+  frame: {
+    justifyContent: "center",
+  },
+}));
+
+const Faq = () => {
+  const classes = faqStyles();
+  return (
+    <Grid container spacing={3}>
+      <Grid item xs={12} sm={12} md={8} lg={8}>
+        <Typography variant="h3" component="h1" gutterBottom>
+          Frequently Asked Questions
+        </Typography>
+        <Typography variant="body1" align="justify" gutterBottom>
+          <strong>Who can join?</strong>
+          <br />
+          The hackathon is open for anyone to join, devs of all levels,
+          designers are all welcome.
+          <br />
+          <br />
+          <strong>How can I submit my project idea?</strong>
+          <br />
+          Once you register to HfH you are going to receive an invite to join
+          our slack group. Through slack we are going to be able to share
+          project ideas, get feedback and start getting to know other
+          participants and ideas.
+          <br />
+          <br />
+          <strong>I don’t have a team/a project, can I join it anyway?</strong>
+          <br />
+          Yes! Part of the goal of HfH is to connect people. At the first hours
+          of the hackathon we are going to focus on networking and ensuring
+          teams are formed.
+          <br />
+          <br />
+          <strong>Is the event free?</strong>
+          <br />
+          Absolutely! We want to support the community, connect to new people
+          and develop cool stuff.
+        </Typography>
+      </Grid>
+      <Grid item xs={12} sm={12} md={4} ld={4}>
+        <RegisterButton />
       </Grid>
     </Grid>
   );
@@ -390,7 +418,8 @@ const Mentors = () => {
 const useHeaderItemStyles = makeStyles(theme => ({
   title: {
     fontSize: 18,
-    alignContent: "center"
+    alignContent: "center",
+    paddingLeft: '9px'
   }
 }));
 
@@ -409,6 +438,7 @@ const HeaderItem = ({ title, actionFn }) => {
     <div>
       <Button
         className={classes.title}
+        style={title === 'FAQ' ? { paddingLeft: '0' } : {}}
         aria-controls="simple-menu"
         aria-haspopup="true"
         onClick={actionFn}
@@ -426,6 +456,9 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: theme.spacing(3),
     paddingTop: theme.spacing(3),
     backgroundColor: "#eeeeee"
+  },
+  rightHeaderMenu: {
+    marginTop: theme.spacing(2),
   },
   headerLine: {
     padding: theme.spacing(2),
@@ -477,37 +510,39 @@ const Home = () => {
               />
             </Grid>
             <Grid item xs={12} sm={12} md={3}>
-              <HeaderItem title="About" actionFn={() => setDisplay(ABOUT)} />
-              <HeaderItem
-                title="Register"
-                actionFn={() => setDisplay(REGISTER)}
-              />
-              <HeaderItem
-                title="Rules & Prize"
-                actionFn={() => setDisplay(RULES_PRIZES)}
-              />
-              <HeaderItem title="Mentors" actionFn={() => setDisplay(MENTORS)} />
+              <Box className={classes.rightHeaderMenu}>
+                <HeaderItem title="About" actionFn={() => setDisplay(ABOUT)} />
+                <HeaderItem title="FAQ" actionFn={() => setDisplay(FAQ)} />
+                <HeaderItem
+                  title="Rules & Prize"
+                  actionFn={() => setDisplay(RULES_PRIZES)}
+                />
+                <HeaderItem
+                  title="Mentors"
+                  actionFn={() => setDisplay(MENTORS)}
+                />
+              </Box>
             </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
       <div className={classes.root}>
         <Box display={display === ABOUT ? "block" : "none"}>
-          <About registerFn={() => setDisplay(REGISTER)} />
+          <About />
         </Box>
         <Box display={display === RULES_PRIZES ? "block" : "none"}>
-          <RulesAndPrize registerFn={() => setDisplay(REGISTER)} />
+          <RulesAndPrize />
         </Box>
-        <Box display={display === REGISTER ? "block" : "none"}>
-          <Register />
+        <Box display={display === FAQ ? "block" : "none"}>
+          <Faq />
         </Box>
         <Box display={display === MENTORS ? "block" : "none"}>
           <Mentors />
         </Box>
         <footer className={classes.footer}>
           <Divider className={classes.divider} />
-          <Typography variant="h3" component="h1" gutterBottom>
-            Sponsors
+          <Typography variant="h4" gutterBottom>
+            Sponsor
           </Typography>
           <Box pt="10px">
             <a href="https://coinsquare.com/" target="_blank">
