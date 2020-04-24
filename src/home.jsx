@@ -70,7 +70,7 @@ const MENTORS_LIST = [
     type: "Mentor",
     name: "Lucas Alencar",
     info:
-      "Lucas has been thriving in the software industry from the times of Java, SQL and Rock'n'roll, when coding used to be a typing contest to the times of Python on startups, when coding became writing indecipherable stuff. He has 15 years of diverse experience in software engineering divided between CMMI certified software houses, multinational enterprises and small fast-paced startups.",
+      "Software Engineer at Nubank, worked in many different projects as full stack web developer and nowadays works mainly in backend services written in Clojure.",
     linkedin: "https://www.linkedin.com/in/lucasandre/",
     github: "https://github.com/lucasalencar",
   },
