@@ -156,7 +156,7 @@ const About = () => {
           Hacking from Home is your chance to make a difference during the
           quarantine. It is a virtual hackathon organised by a group of local
           developers that, worrying about the impact of Covid-19 in our
-          community, wanted to find something to mobilise it.
+          community, wanted to find something to immobilise it.
           <br />
           <br />
           Focusing on social distancing issues, Hacking from Home challenges
@@ -169,8 +169,8 @@ const About = () => {
           Slack workspace where they will be introduced to the mentors and will
           be able to book conversations with them. Since we can’t be in the
           frontline with the doctors, wipe the dust off, gather your team and
-          come to be the rearline in the fight against Covid-19! From there we
-          can contribute to make life easier in our community.
+          come to be the “rearline” in the fight against Covid-19! From there we
+          can contribute to “making” life easier in our community.
           <br />
           <br />
           Register Now!
@@ -188,11 +188,10 @@ const RulesAndPrize = () => {
     <Grid container spacing={3}>
       <Grid item xs={12} md={8}>
         <Typography variant="h3" component="h1" gutterBottom>
-          Rules & Prize
+          Rules & Prizes
         </Typography>
         <Typography variant="body1" align="justify" gutterBottom>
-          In order to make it a fair and respectful competition, we have a few
-          set of rules:
+          We have a set of rules in place to make it a fair and respectful competition.
         </Typography>
         <Typography variant="h6" component="h2" gutterBottom>
           Rulebook
@@ -208,8 +207,8 @@ const RulesAndPrize = () => {
               Remote Work;
             </li>
             <li>
-              All documentation, code and other materials must English as an
-              official language;
+              All documentation, code and other materials must be in English
+              as an official language;
             </li>
             <li>
               Every participant, mentor and organization staff must follow the
@@ -267,9 +266,9 @@ const RulesAndPrize = () => {
           Prize
         </Typography>
         <Typography variant="body1" align="justify" gutterBottom>
-          In partnership with Coinsquare, we're giving 1 (one) ETH crypto coin
-          to the winning team. Also the winning team's project will appear on
-          all our Social Media channels.
+          In partnership with Coinsquare, we're awarding 1 (one) ETH crypto coin
+          to the winning team. The winning team's project will appear on all
+          Coinsquare’s Social Media channels.
         </Typography>
       </Grid>
       <Grid item xs={12} md={4}>
@@ -303,21 +302,20 @@ const Faq = () => {
           <strong>How can I submit my project idea?</strong>
           <br />
           Once you register to HfH you are going to receive an invite to join
-          our slack group. Through slack we are going to be able to share
-          project ideas, get feedback and start getting to know other
+          our slack group. Through Slack, we are going to be able to share
+          project ideas, get feedback, and start getting to know other
           participants and ideas.
           <br />
           <br />
           <strong>I don’t have a team/a project, can I join it anyway?</strong>
           <br />
-          Yes! Part of the goal of HfH is to connect people. At the first hours
-          of the hackathon we are going to focus on networking and ensuring
-          teams are formed.
+          Yes! Part of the goal of HfH is to connect people. The first part
+          of the hackathon will be dedicated to networking and forming teams.
           <br />
           <br />
           <strong>Is the event free?</strong>
           <br />
-          Absolutely! We want to support the community, connect to new people
+          Absolutely! We want to support the community, connect to new people,
           and develop cool stuff.
         </Typography>
       </Grid>
@@ -514,7 +512,7 @@ const Home = () => {
                 <HeaderItem title="About" actionFn={() => setDisplay(ABOUT)} />
                 <HeaderItem title="FAQ" actionFn={() => setDisplay(FAQ)} />
                 <HeaderItem
-                  title="Rules & Prize"
+                  title="Rules & Prizes"
                   actionFn={() => setDisplay(RULES_PRIZES)}
                 />
                 <HeaderItem
