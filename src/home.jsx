@@ -26,6 +26,7 @@ import luciano from "./luciano.png";
 import gabriela from "./gabriela.jpg";
 import martin from "./martin.jpg";
 import danilo from "./danilo.jpg";
+import fayez from "./fayez.jpg";
 
 const ABOUT = "about";
 const RULES_PRIZES = "rulesAndPrizes";
@@ -73,6 +74,14 @@ const MENTORS_LIST = [
       "Software Engineer at Nubank, worked in many different projects as full stack web developer and nowadays works mainly in backend services written in Clojure.",
     linkedin: "https://www.linkedin.com/in/lucasandre/",
     github: "https://github.com/lucasalencar",
+  },
+  {
+    image: fayez,
+    type: "Mentor",
+    name: "Fayez Khan",
+    info:
+      "Fayez is a passionate product professional with over 10 years of experience in industries ranging from education, nuclear, water and most recently as a Director of Product at EventMobi.",
+      "linkedin": "https://www.linkedin.com/in/fayezk/",
   },
   {
     image: danilo,
